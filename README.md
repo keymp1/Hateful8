@@ -1,18 +1,19 @@
-Project: BucStop
+
+**Project**: BucStop
 _____________________________________________________________________
 
-Description
+**Description**
 _____________________________________________________________________
-One paragraph og project description goes here.
+One paragraph of project description goes here.
 
-Prerequisites
+**Prerequisites**
 _____________________________________________________________________
 Anything Required to run website/install
 
-Installation
+**Installation**
 _____________________________________________________________________
 How to install if applicable 
 
-Citation
+**Citation**
 _____________________________________________________________________
 Add any citations as needed
