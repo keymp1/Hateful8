@@ -1,302 +1,390 @@
-<div>
-  <link href="./home.css" rel="stylesheet" />
-  <div class="home-container">
-    <div data-role="Header" class="home-navbar-container">
-      <div class="home-navbar">
-        <div class="home-left-side">
-          <div data-role="BurgerMenu" class="home-burger-menu">
-            <svg viewBox="0 0 1024 1024" class="home-icon">
-              <path
-                d="M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z"
-              ></path>
-            </svg>
-          </div>
-          <img
-            alt="image"
-            src="/logotransparent-400w.png"
-            loading="eager"
-            class="home-image"
-          />
-          <div class="home-links-container">
-            <span class="home-link Anchor">Home</span>
-            <span class="home-link1 Anchor">Games</span>
-            <span class="home-link2 Anchor">Community</span>
-            <span class="home-link3 Anchor">About</span>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Landing Page</title>
+    <meta property="og:title" content="Landing Page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Raleway;
+        font-size: 18px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.55;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <style>
+      html {
+      scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="home-container">
+        <div data-role="Header" class="home-navbar-container">
+          <div class="home-navbar">
+            <div class="home-left-side">
+              <div data-role="BurgerMenu" class="home-burger-menu">
+                <svg viewBox="0 0 1024 1024" class="home-icon">
+                  <path
+                    d="M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z"
+                  ></path>
+                </svg>
+              </div>
+              <img
+                alt="image"
+                src="public/logotransparent-400w.png"
+                loading="eager"
+                class="home-image"
+              />
+              <div class="home-links-container">
+                <span class="home-link">Home</span>
+                <span class="home-link1">Games</span>
+                <span class="home-link2">Community</span>
+                <a
+                  href="https://google.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-link3"
+                >
+                  About
+                </a>
+              </div>
+            </div>
+            <div class="home-right-side"></div>
+            <div data-role="MobileMenu" class="home-mobile-menu">
+              <div class="home-container1">
+                <img
+                  alt="image"
+                  src="https://play.teleporthq.io/static/svg/default-img.svg"
+                  class="home-image1"
+                />
+                <div data-role="CloseMobileMenu" class="home-close-menu">
+                  <svg viewBox="0 0 1024 1024" class="home-icon02">
+                    <path
+                      d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="home-links-container1">
+                <span class="home-link4 Anchor">Resources</span>
+                <span class="home-link5 Anchor">Inspiration</span>
+                <span class="home-link6 Anchor">Process</span>
+                <span class="home-link7 Anchor">Our story</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="home-right-side"></div>
-        <div data-role="MobileMenu" class="home-mobile-menu">
-          <div class="home-container1">
+        <div class="home-gallery">
+          <div class="gallery-card1-gallery-card gallery-card1-root-class-name">
+            <img
+              alt="horsechickengif"
+              src="public/gif-1500w.gif"
+              class="gallery-card1-image"
+            />
+            <h2 class="gallery-card1-text"><span>Example Game</span></h2>
+            <span class="gallery-card1-text1">
+              <span>A Gif to Show you can have Gifs as Images</span>
+            </span>
+          </div>
+          <div
+            class="gallery-card1-gallery-card gallery-card1-root-class-name3"
+          >
             <img
               alt="image"
-              src="https://play.teleporthq.io/static/svg/default-img.svg"
-              class="home-image1"
+              src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDEyfHxmb3Jlc3R8ZW58MHx8fHwxNjI2MjUxMjg4&amp;ixlib=rb-1.2.1&amp;w=1500"
+              class="gallery-card1-image"
             />
-            <div data-role="CloseMobileMenu" class="home-close-menu">
-              <svg viewBox="0 0 1024 1024" class="home-icon02">
-                <path
-                  d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
-                ></path>
-              </svg>
+            <h2 class="gallery-card1-text"><span>Project Title</span></h2>
+            <span class="gallery-card1-text1">
+              <span>Lorem ipsum dolor sit amet</span>
+            </span>
+          </div>
+          <div
+            class="gallery-card1-gallery-card gallery-card1-root-class-name1"
+          >
+            <img
+              alt="image"
+              src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDEyfHxmb3Jlc3R8ZW58MHx8fHwxNjI2MjUxMjg4&amp;ixlib=rb-1.2.1&amp;w=1500"
+              class="gallery-card1-image"
+            />
+            <h2 class="gallery-card1-text"><span>Project Title</span></h2>
+            <span class="gallery-card1-text1">
+              <span>Lorem ipsum dolor sit amet</span>
+            </span>
+          </div>
+          <div
+            class="gallery-card1-gallery-card gallery-card1-root-class-name2"
+          >
+            <img
+              alt="image"
+              src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDEyfHxmb3Jlc3R8ZW58MHx8fHwxNjI2MjUxMjg4&amp;ixlib=rb-1.2.1&amp;w=1500"
+              class="gallery-card1-image"
+            />
+            <h2 class="gallery-card1-text"><span>Project Title</span></h2>
+            <span class="gallery-card1-text1">
+              <span>Lorem ipsum dolor sit amet</span>
+            </span>
+          </div>
+          <div
+            class="gallery-card1-gallery-card gallery-card1-root-class-name4"
+          >
+            <img
+              alt="image"
+              src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDEyfHxmb3Jlc3R8ZW58MHx8fHwxNjI2MjUxMjg4&amp;ixlib=rb-1.2.1&amp;w=1500"
+              class="gallery-card1-image"
+            />
+            <h2 class="gallery-card1-text"><span>Project Title</span></h2>
+            <span class="gallery-card1-text1">
+              <span>Lorem ipsum dolor sit amet</span>
+            </span>
+          </div>
+          <div
+            class="gallery-card1-gallery-card gallery-card1-root-class-name5"
+          >
+            <img
+              alt="image"
+              src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDEyfHxmb3Jlc3R8ZW58MHx8fHwxNjI2MjUxMjg4&amp;ixlib=rb-1.2.1&amp;w=1500"
+              class="gallery-card1-image"
+            />
+            <h2 class="gallery-card1-text"><span>Project Title</span></h2>
+            <span class="gallery-card1-text1">
+              <span>Lorem ipsum dolor sit amet</span>
+            </span>
+          </div>
+        </div>
+        <div class="home-team">
+          <div class="home-heading-container">
+            <h1 class="home-text Section-Heading">Meet the Team</h1>
+            <span class="home-text1 Section-Text">
+              Lorme ipsum dolor sit amet, consectetur adipiscing elit. Integer
+              nec odio. Praesent libero.
+            </span>
+          </div>
+          <div class="home-cards-container">
+            <div class="home-container2">
+              <div class="team-card-team-card">
+                <div class="team-card-avatar-container">
+                  <svg viewBox="0 0 1024 1024" class="team-card-icon">
+                    <path
+                      d="M576 706.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="team-card-name Card-Heading">
+                  <span>Maxwell</span>
+                </span>
+                <span class="team-card-position Card-Text">
+                  <span>Position</span>
+                </span>
+              </div>
+            </div>
+            <div class="team-card-team-card team-card-root-class-name">
+              <div class="team-card-avatar-container">
+                <svg viewBox="0 0 1024 1024" class="team-card-icon">
+                  <path
+                    d="M576 706.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="team-card-name Card-Heading">
+                <span>Michael</span>
+              </span>
+              <span class="team-card-position Card-Text">
+                <span>Position</span>
+              </span>
+            </div>
+            <div class="home-container3">
+              <div class="home-container4"></div>
+              <div class="team-card-team-card team-card-root-class-name1">
+                <div class="team-card-avatar-container">
+                  <svg viewBox="0 0 1024 1024" class="team-card-icon">
+                    <path
+                      d="M576 706.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="team-card-name Card-Heading">
+                  <span>Elainna</span>
+                </span>
+                <span class="team-card-position Card-Text">
+                  <span>Position</span>
+                </span>
+              </div>
+            </div>
+            <div class="home-container5">
+              <div class="home-container6"></div>
+              <div class="team-card-team-card team-card-root-class-name2">
+                <div class="team-card-avatar-container">
+                  <svg viewBox="0 0 1024 1024" class="team-card-icon">
+                    <path
+                      d="M576 706.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="team-card-name Card-Heading">
+                  <span>Caleb</span>
+                </span>
+                <span class="team-card-position Card-Text">
+                  <span>Position</span>
+                </span>
+              </div>
+            </div>
+            <div class="team-card-team-card team-card-root-class-name3">
+              <div class="team-card-avatar-container">
+                <svg viewBox="0 0 1024 1024" class="team-card-icon">
+                  <path
+                    d="M576 706.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="team-card-name Card-Heading">
+                <span>Matthew</span>
+              </span>
+              <span class="team-card-position Card-Text">
+                <span>Position</span>
+              </span>
+            </div>
+            <div class="team-card-team-card team-card-root-class-name4">
+              <div class="team-card-avatar-container">
+                <svg viewBox="0 0 1024 1024" class="team-card-icon">
+                  <path
+                    d="M576 706.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="team-card-name Card-Heading"><span>Ben</span></span>
+              <span class="team-card-position Card-Text">
+                <span>Position</span>
+              </span>
+            </div>
+            <div class="team-card-team-card team-card-root-class-name5">
+              <div class="team-card-avatar-container">
+                <svg viewBox="0 0 1024 1024" class="team-card-icon">
+                  <path
+                    d="M576 706.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="team-card-name Card-Heading">
+                <span>Kincaid</span>
+              </span>
+              <span class="team-card-position Card-Text">
+                <span>Position</span>
+              </span>
+            </div>
+            <div class="home-container7"></div>
+          </div>
+        </div>
+        <div class="home-get-in-touch">
+          <div class="home-container8">
+            <h2 class="home-text2 Section-Heading">Get in touch</h2>
+          </div>
+          <div class="home-content-container">
+            <div class="home-form-container">
+              <span class="home-heading BigCard-Heading">
+                Send us a message
+              </span>
+              <input
+                type="text"
+                required="true"
+                placeholder="Name"
+                class="home-name input"
+              />
+              <input
+                type="text"
+                required="true"
+                placeholder="E-mail"
+                class="home-email input"
+              />
+              <textarea
+                placeholder="Your Message"
+                class="home-message textarea"
+              ></textarea>
+              <button class="home-cta-btn Anchor button">SEND</button>
+            </div>
+            <div class="home-locations-container">
+              <div class="home-location-1">
+                <span class="home-heading1">London, UK</span>
+                <div class="home-adress">
+                  <svg viewBox="0 0 1024 1024" class="home-icon04">
+                    <path
+                      d="M512 0c-176.732 0-320 143.268-320 320 0 320 320 704 320 704s320-384 320-704c0-176.732-143.27-320-320-320zM512 512c-106.040 0-192-85.96-192-192s85.96-192 192-192 192 85.96 192 192-85.96 192-192 192z"
+                    ></path>
+                  </svg>
+                  <span class="home-text3 Section-Text">Address</span>
+                </div>
+                <div class="home-email1">
+                  <svg viewBox="0 0 1024 1024" class="home-icon06">
+                    <path
+                      d="M854 342v-86l-342 214-342-214v86l342 212zM854 170q34 0 59 26t25 60v512q0 34-25 60t-59 26h-684q-34 0-59-26t-25-60v-512q0-34 25-60t59-26h684z"
+                    ></path>
+                  </svg>
+                  <span class="home-text4 Section-Text">E-mail Address</span>
+                </div>
+                <div class="home-phone">
+                  <svg viewBox="0 0 804.5714285714286 1024" class="home-icon08">
+                    <path
+                      d="M804.571 708.571c0 20.571-9.143 60.571-17.714 79.429-12 28-44 46.286-69.714 60.571-33.714 18.286-68 29.143-106.286 29.143-53.143 0-101.143-21.714-149.714-39.429-34.857-12.571-68.571-28-100-47.429-97.143-60-214.286-177.143-274.286-274.286-19.429-31.429-34.857-65.143-47.429-100-17.714-48.571-39.429-96.571-39.429-149.714 0-38.286 10.857-72.571 29.143-106.286 14.286-25.714 32.571-57.714 60.571-69.714 18.857-8.571 58.857-17.714 79.429-17.714 4 0 8 0 12 1.714 12 4 24.571 32 30.286 43.429 18.286 32.571 36 65.714 54.857 97.714 9.143 14.857 26.286 33.143 26.286 50.857 0 34.857-103.429 85.714-103.429 116.571 0 15.429 14.286 35.429 22.286 49.143 57.714 104 129.714 176 233.714 233.714 13.714 8 33.714 22.286 49.143 22.286 30.857 0 81.714-103.429 116.571-103.429 17.714 0 36 17.143 50.857 26.286 32 18.857 65.143 36.571 97.714 54.857 11.429 5.714 39.429 18.286 43.429 30.286 1.714 4 1.714 8 1.714 12z"
+                    ></path>
+                  </svg>
+                  <span class="home-text5 Section-Text">Phone Number</span>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="home-links-container1">
-            <span class="home-link4 Anchor">Resources</span>
-            <span class="home-link5 Anchor">Inspiration</span>
-            <span class="home-link6 Anchor">Process</span>
-            <span class="home-link7 Anchor">Our story</span>
+        </div>
+        <div class="home-section-separator"></div>
+        <div class="home-footer-container">
+          <div class="home-footer">
+            <div class="home-social-links"></div>
+            <div class="home-copyright-container">
+              <svg viewBox="0 0 1024 1024" class="home-icon10">
+                <path
+                  d="M512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM506 390q-80 0-80 116v12q0 116 80 116 30 0 50-17t20-43h76q0 50-44 88-42 36-102 36-80 0-122-48t-42-132v-12q0-82 40-128 48-54 124-54 66 0 104 38 42 42 42 98h-76q0-14-6-26-10-20-14-24-20-20-50-20z"
+                ></path>
+              </svg>
+              <span class="Anchor">Copyright, 2023</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="home-gallery">
-      <div class="gallery-card1-gallery-card gallery-card1-root-class-name">
-        <img alt="image" src="/gif-1500w.gif" class="gallery-card1-image" />
-        <h2 class="gallery-card1-text"><span>Project Title</span></h2>
-        <span class="gallery-card1-text1">
-          <span>Lorem ipsum dolor sit amet</span>
-        </span>
-      </div>
-      <div class="gallery-card1-gallery-card gallery-card1-root-class-name3">
-        <img
-          alt="image"
-          src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDEyfHxmb3Jlc3R8ZW58MHx8fHwxNjI2MjUxMjg4&ixlib=rb-1.2.1&w=1500"
-          class="gallery-card1-image"
-        />
-        <h2 class="gallery-card1-text"><span>Project Title</span></h2>
-        <span class="gallery-card1-text1">
-          <span>Lorem ipsum dolor sit amet</span>
-        </span>
-      </div>
-      <div class="gallery-card1-gallery-card gallery-card1-root-class-name1">
-        <img
-          alt="image"
-          src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDEyfHxmb3Jlc3R8ZW58MHx8fHwxNjI2MjUxMjg4&ixlib=rb-1.2.1&w=1500"
-          class="gallery-card1-image"
-        />
-        <h2 class="gallery-card1-text"><span>Project Title</span></h2>
-        <span class="gallery-card1-text1">
-          <span>Lorem ipsum dolor sit amet</span>
-        </span>
-      </div>
-      <div class="gallery-card1-gallery-card gallery-card1-root-class-name2">
-        <img
-          alt="image"
-          src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDEyfHxmb3Jlc3R8ZW58MHx8fHwxNjI2MjUxMjg4&ixlib=rb-1.2.1&w=1500"
-          class="gallery-card1-image"
-        />
-        <h2 class="gallery-card1-text"><span>Project Title</span></h2>
-        <span class="gallery-card1-text1">
-          <span>Lorem ipsum dolor sit amet</span>
-        </span>
-      </div>
-      <div class="gallery-card1-gallery-card gallery-card1-root-class-name4">
-        <img
-          alt="image"
-          src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDEyfHxmb3Jlc3R8ZW58MHx8fHwxNjI2MjUxMjg4&ixlib=rb-1.2.1&w=1500"
-          class="gallery-card1-image"
-        />
-        <h2 class="gallery-card1-text"><span>Project Title</span></h2>
-        <span class="gallery-card1-text1">
-          <span>Lorem ipsum dolor sit amet</span>
-        </span>
-      </div>
-      <div class="gallery-card1-gallery-card gallery-card1-root-class-name5">
-        <img
-          alt="image"
-          src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDEyfHxmb3Jlc3R8ZW58MHx8fHwxNjI2MjUxMjg4&ixlib=rb-1.2.1&w=1500"
-          class="gallery-card1-image"
-        />
-        <h2 class="gallery-card1-text"><span>Project Title</span></h2>
-        <span class="gallery-card1-text1">
-          <span>Lorem ipsum dolor sit amet</span>
-        </span>
-      </div>
-    </div>
-    <div class="home-team">
-      <div class="home-heading-container">
-        <h1 class="home-text Section-Heading">Meet the Team</h1>
-        <span class="home-text1 Section-Text">
-          Lorme ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
-          odio. Praesent libero.
-        </span>
-      </div>
-      <div class="home-cards-container">
-        <div class="home-container2">
-          <div class="team-card-team-card">
-            <div class="team-card-avatar-container">
-              <svg viewBox="0 0 1024 1024" class="team-card-icon">
-                <path
-                  d="M576 706.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
-                ></path>
-              </svg>
-            </div>
-            <span class="team-card-name Card-Heading">
-              <span>Maxwell</span>
-            </span>
-            <span class="team-card-position Card-Text">
-              <span>Position</span>
-            </span>
-          </div>
-        </div>
-        <div class="team-card-team-card team-card-root-class-name">
-          <div class="team-card-avatar-container">
-            <svg viewBox="0 0 1024 1024" class="team-card-icon">
-              <path
-                d="M576 706.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
-              ></path>
-            </svg>
-          </div>
-          <span class="team-card-name Card-Heading"><span>Michael</span></span>
-          <span class="team-card-position Card-Text">
-            <span>Position</span>
-          </span>
-        </div>
-        <div class="home-container3">
-          <div class="home-container4"></div>
-          <div class="team-card-team-card team-card-root-class-name1">
-            <div class="team-card-avatar-container">
-              <svg viewBox="0 0 1024 1024" class="team-card-icon">
-                <path
-                  d="M576 706.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
-                ></path>
-              </svg>
-            </div>
-            <span class="team-card-name Card-Heading">
-              <span>Elainna</span>
-            </span>
-            <span class="team-card-position Card-Text">
-              <span>Position</span>
-            </span>
-          </div>
-        </div>
-        <div class="home-container5">
-          <div class="home-container6"></div>
-          <div class="team-card-team-card team-card-root-class-name2">
-            <div class="team-card-avatar-container">
-              <svg viewBox="0 0 1024 1024" class="team-card-icon">
-                <path
-                  d="M576 706.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
-                ></path>
-              </svg>
-            </div>
-            <span class="team-card-name Card-Heading"><span>Caleb</span></span>
-            <span class="team-card-position Card-Text">
-              <span>Position</span>
-            </span>
-          </div>
-        </div>
-        <div class="team-card-team-card team-card-root-class-name3">
-          <div class="team-card-avatar-container">
-            <svg viewBox="0 0 1024 1024" class="team-card-icon">
-              <path
-                d="M576 706.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
-              ></path>
-            </svg>
-          </div>
-          <span class="team-card-name Card-Heading"><span>Matthew</span></span>
-          <span class="team-card-position Card-Text">
-            <span>Position</span>
-          </span>
-        </div>
-        <div class="team-card-team-card team-card-root-class-name4">
-          <div class="team-card-avatar-container">
-            <svg viewBox="0 0 1024 1024" class="team-card-icon">
-              <path
-                d="M576 706.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
-              ></path>
-            </svg>
-          </div>
-          <span class="team-card-name Card-Heading"><span>Ben</span></span>
-          <span class="team-card-position Card-Text">
-            <span>Position</span>
-          </span>
-        </div>
-        <div class="team-card-team-card team-card-root-class-name5">
-          <div class="team-card-avatar-container">
-            <svg viewBox="0 0 1024 1024" class="team-card-icon">
-              <path
-                d="M576 706.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
-              ></path>
-            </svg>
-          </div>
-          <span class="team-card-name Card-Heading"><span>Kincaid</span></span>
-          <span class="team-card-position Card-Text">
-            <span>Position</span>
-          </span>
-        </div>
-        <div class="home-container7"></div>
-      </div>
-    </div>
-    <div class="home-get-in-touch">
-      <div class="home-container8">
-        <h2 class="home-text2 Section-Heading">Get in touch</h2>
-      </div>
-      <div class="home-content-container">
-        <div class="home-form-container">
-          <span class="home-heading BigCard-Heading">Send us a message</span>
-          <input
-            type="text"
-            required="true"
-            placeholder="Name"
-            class="home-name input"
-          />
-          <input
-            type="text"
-            required="true"
-            placeholder="E-mail"
-            class="home-email input"
-          />
-          <textarea
-            placeholder="Your Message"
-            class="home-message textarea"
-          ></textarea>
-          <button class="home-cta-btn Anchor button">SEND</button>
-        </div>
-        <div class="home-locations-container">
-          <div class="home-location-1">
-            <span class="home-heading1">London, UK</span>
-            <div class="home-adress">
-              <svg viewBox="0 0 1024 1024" class="home-icon04">
-                <path
-                  d="M512 0c-176.732 0-320 143.268-320 320 0 320 320 704 320 704s320-384 320-704c0-176.732-143.27-320-320-320zM512 512c-106.040 0-192-85.96-192-192s85.96-192 192-192 192 85.96 192 192-85.96 192-192 192z"
-                ></path>
-              </svg>
-              <span class="home-text3 Section-Text">Address</span>
-            </div>
-            <div class="home-email1">
-              <svg viewBox="0 0 1024 1024" class="home-icon06">
-                <path
-                  d="M854 342v-86l-342 214-342-214v86l342 212zM854 170q34 0 59 26t25 60v512q0 34-25 60t-59 26h-684q-34 0-59-26t-25-60v-512q0-34 25-60t59-26h684z"
-                ></path>
-              </svg>
-              <span class="home-text4 Section-Text">E-mail Address</span>
-            </div>
-            <div class="home-phone">
-              <svg viewBox="0 0 804.5714285714286 1024" class="home-icon08">
-                <path
-                  d="M804.571 708.571c0 20.571-9.143 60.571-17.714 79.429-12 28-44 46.286-69.714 60.571-33.714 18.286-68 29.143-106.286 29.143-53.143 0-101.143-21.714-149.714-39.429-34.857-12.571-68.571-28-100-47.429-97.143-60-214.286-177.143-274.286-274.286-19.429-31.429-34.857-65.143-47.429-100-17.714-48.571-39.429-96.571-39.429-149.714 0-38.286 10.857-72.571 29.143-106.286 14.286-25.714 32.571-57.714 60.571-69.714 18.857-8.571 58.857-17.714 79.429-17.714 4 0 8 0 12 1.714 12 4 24.571 32 30.286 43.429 18.286 32.571 36 65.714 54.857 97.714 9.143 14.857 26.286 33.143 26.286 50.857 0 34.857-103.429 85.714-103.429 116.571 0 15.429 14.286 35.429 22.286 49.143 57.714 104 129.714 176 233.714 233.714 13.714 8 33.714 22.286 49.143 22.286 30.857 0 81.714-103.429 116.571-103.429 17.714 0 36 17.143 50.857 26.286 32 18.857 65.143 36.571 97.714 54.857 11.429 5.714 39.429 18.286 43.429 30.286 1.714 4 1.714 8 1.714 12z"
-                ></path>
-              </svg>
-              <span class="home-text5 Section-Text">Phone Number</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="home-section-separator"></div>
-    <div class="home-footer-container">
-      <div class="home-footer">
-        <div class="home-social-links"></div>
-        <div class="home-copyright-container">
-          <svg viewBox="0 0 1024 1024" class="home-icon10">
-            <path
-              d="M512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM506 390q-80 0-80 116v12q0 116 80 116 30 0 50-17t20-43h76q0 50-44 88-42 36-102 36-80 0-122-48t-42-132v-12q0-82 40-128 48-54 124-54 66 0 104 38 42 42 42 98h-76q0-14-6-26-10-20-14-24-20-20-50-20z"
-            ></path>
-          </svg>
-          <span class="Anchor">Copyright, 2023</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+    <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+  </body>
+</html>
