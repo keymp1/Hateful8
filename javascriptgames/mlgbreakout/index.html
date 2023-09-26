@@ -459,12 +459,12 @@
                  canvasContext.fillText(`Controls` ,(canvas.width/2) - (controlTitleTextSize/2), 300);
  
  
-                 LMBcontrolTextSize = getTextWidth(`LMB (Left Mouse Button): Increase Ball Speed`, "20px sans-serif");
+                 LMBcontrolTextSize = getTextWidth(`i: Increase Ball Speed`, "20px sans-serif");
  
                  //Draw the Controls.
                  canvasContext.font = "20px sans-serif";
                  canvasContext.fillStyle = "#000000";
-                 canvasContext.fillText(`LMB (Left Mouse Button): Increase Ball Speed`,(canvas.width/2) - (LMBcontrolTextSize/2), 350);
+                 canvasContext.fillText(`i: Increase Ball Speed`,(canvas.width/2) - (LMBcontrolTextSize/2), 350);
  
  
                  MMBcontrolTextSize = getTextWidth(`MMB (Middle Mouse Button): Activate Auto Mode`, "20px sans-serif");
@@ -475,12 +475,12 @@
                  canvasContext.fillText(`MMB (Middle Mouse Button): Activate Auto Mode`,(canvas.width/2) - (MMBcontrolTextSize/2), 400);
  
  
-                 RMBcontrolTextSize = getTextWidth(`RMB (Right Mouse Button): Decrease Ball Speed`, "20px sans-serif");
+                 RMBcontrolTextSize = getTextWidth(`RMB (Right Mouse Button) or u: Decrease Ball Speed`, "20px sans-serif");
  
                  //Draw the Controls.
                  canvasContext.font = "20px sans-serif";
                  canvasContext.fillStyle = "#000000";
-                 canvasContext.fillText(`RMB (Right Mouse Button): Decrease Ball Speed`,(canvas.width/2) - (RMBcontrolTextSize/2), 450);
+                 canvasContext.fillText(`RMB (Right Mouse Button) or u: Decrease Ball Speed`,(canvas.width/2) - (RMBcontrolTextSize/2), 450);
  
  
                  PcontrolTextSize = getTextWidth(`P (Keyboard): Pause the Game`, "20px sans-serif");
@@ -1307,8 +1307,8 @@
                  //replace the event listener with a function that increases the speed.
                  document.removeEventListener("click", beginGame, false);
                  
-                 //removed to contend to mobile users.
-                 //document.addEventListener("click", increaseSpeed, false);
+                 //press i to increase speed.
+                 document.addEventListener("i", increaseSpeed, false);
  
                  //begin playing the background music.
                  backgroundMusic.play();
@@ -1317,7 +1317,7 @@
                  draw();
              }
 
-            //left-click to increase speed.
+            //press to increase speed. 
             /* This function increases the speed of the ball
              * whenever LMB (Left Mouse Button) [Left-Click] is pressed.
              * 
@@ -1451,6 +1451,20 @@
                  else if (e.key === "Left" || e.key === "ArrowLeft")
                  {
                      leftPressed = true;
+                 }
+                 else if (e.key === "i")
+                 {
+                    increaseSpeed();
+                 }
+                 else if (e.key === "u")
+                 {
+                    //Negative ballSpeed works, but breaks the game functionality.
+                    if(ballSpeed >= 1)
+                    {
+                        ballSpeed--;
+                    }
+                    //update ballMoveX and ballMoveY accordingly.
+                    updateSpeed();
                  }
              }
  
