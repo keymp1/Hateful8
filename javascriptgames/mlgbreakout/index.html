@@ -1306,7 +1306,9 @@
              {
                  //replace the event listener with a function that increases the speed.
                  document.removeEventListener("click", beginGame, false);
-                 document.addEventListener("click", increaseSpeed, false);
+                 
+                 //removed to contend to mobile users.
+                 //document.addEventListener("click", increaseSpeed, false);
  
                  //begin playing the background music.
                  backgroundMusic.play();
