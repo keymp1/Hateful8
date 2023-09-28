@@ -27,6 +27,7 @@
   --dl-radius-radius-radius24: 24px;
   --dl-space-space-doubleunit: 16px;
   --dl-space-space-tripleunit: 24px;
+  --dl-color-primary-primaryred: #ce2525ff;
 }
 .teleport-show {
   display: flex !important;
@@ -131,6 +132,6 @@
   font-family: Montserrat;
   font-weight: 700;
   line-height: 1.22;
-  text-transform: none;
+  text-transform: lowercase;
   text-decoration: none;
 }

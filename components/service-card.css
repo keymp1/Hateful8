@@ -1,0 +1,31 @@
+.service-card-service-card {
+  width: 30%;
+  display: flex;
+  padding: var(--dl-space-space-fourunits);
+  position: relative;
+  align-items: flex-start;
+  border-radius: var(--dl-radius-radius-radius4);
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dl-color-gray-900);
+}
+.service-card-text {
+  text-align: center;
+  margin-bottom: var(--dl-space-space-fourunits);
+}
+.service-card-text1 {
+  color: var(--dl-color-gray-700);
+  text-align: left;
+  margin-bottom: var(--dl-space-space-fourunits);
+}
+@media(max-width: 767px) {
+  .service-card-service-card {
+    width: 65%;
+    margin-bottom: var(--dl-space-space-fourunits);
+  }
+}
+@media(max-width: 479px) {
+  .service-card-service-card {
+    width: 100%;
+  }
+}
