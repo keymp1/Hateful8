@@ -32,7 +32,6 @@
   padding-top: var(--dl-space-space-doubleunit);
   border-color: var(--dl-color-gray-black);
   border-width: 1px;
-  padding-left: var(--dl-space-space-tripleunit);
   padding-right: var(--dl-space-space-tripleunit);
   flex-direction: row;
   padding-bottom: var(--dl-space-space-doubleunit);
@@ -69,6 +68,7 @@
   text-decoration: none;
 }
 .about-links-container {
+  gap: var(--dl-space-space-unit);
   width: 100%;
   height: 100%;
   display: flex;
@@ -76,7 +76,7 @@
   margin-left: var(--dl-space-space-tenunits);
   margin-right: var(--dl-space-space-tenunits);
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 }
 .about-link {
   color: rgb(255, 255, 255);
@@ -84,14 +84,14 @@
   height: 100%;
   font-size: 35px;
   align-self: center;
-  box-shadow: rgb(212, 212, 212) 5px 5px 10px 0px;
+  font-style: normal;
   text-align: center;
   transition: 0.3s;
-  font-family: Raleway;
-  font-weight: 800;
+  font-family: "Raleway";
+  font-weight: 700;
   line-height: 2.7;
   border-color: #ffffff;
-  border-width: 5px;
+  border-width: 2px;
   margin-right: 0px;
   border-radius: var(--dl-radius-radius-radius24);
   letter-spacing: 3px;
@@ -110,7 +110,7 @@
   font-style: normal;
   text-align: center;
   transition: 0.3s;
-  font-family: Raleway;
+  font-family: "Raleway";
   font-weight: 700;
   line-height: 2.7;
   border-color: #ffffff;
@@ -151,20 +151,21 @@
   color: rgb(255, 255, 255);
   width: 100%;
   height: 100%;
-  font-size: 35px;
+  font-size: 45px;
   align-self: center;
   font-style: normal;
   text-align: center;
   transition: 0.3s;
   font-family: Raleway;
   font-weight: 700;
-  line-height: 2.7;
+  line-height: 2;
   border-color: #ffffff;
-  border-width: 2px;
+  border-width: 5px;
   border-radius: var(--dl-radius-radius-radius24);
-  letter-spacing: 3px;
-  text-transform: capitalize;
+  letter-spacing: 5px;
+  text-transform: uppercase;
   text-decoration: none;
+  background-image: radial-gradient(circle at center, rgb(206, 37, 37) 70.00%,rgb(255, 255, 255) 100.00%);
 }
 .about-link3:hover {
   width: 125%;
@@ -242,11 +243,11 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.about-text {
+.about-text02 {
   font-size: 3rem;
   text-align: center;
 }
-.about-text1 {
+.about-text03 {
   max-width: 1400px;
   margin-top: 32px;
   text-align: center;
@@ -275,12 +276,12 @@
   padding-right: var(--dl-space-space-tripleunit);
   flex-direction: column;
 }
-.about-text4 {
+.about-text06 {
   color: #ffffff;
   text-align: center;
   margin-bottom: var(--dl-space-space-fourunits);
 }
-.about-text5 {
+.about-text07 {
   color: #ffffff;
   text-align: center;
 }
@@ -310,7 +311,7 @@
   align-items: flex-start;
   justify-content: center;
 }
-.about-text8 {
+.about-text10 {
   color: #ffffff;
   font-size: 48px;
   text-align: center;
@@ -425,10 +426,10 @@
   .about-banner {
     background-color: #ce2525;
   }
-  .about-text {
+  .about-text02 {
     color: rgb(255, 255, 255);
   }
-  .about-text1 {
+  .about-text03 {
     color: #ffffff;
   }
   .about-team {
@@ -442,12 +443,12 @@
     margin-bottom: 83px;
     padding-right: 0px;
   }
-  .about-text4 {
+  .about-text06 {
     color: rgb(255, 255, 255);
     font-size: 70px;
     align-self: center;
   }
-  .about-text5 {
+  .about-text07 {
     color: rgb(255, 255, 255);
     height: 100%;
     font-size: 24px;
@@ -455,7 +456,7 @@
     margin-bottom: 0px;
     padding-bottom: 0px;
   }
-  .about-text6 {
+  .about-text08 {
     color: #ffffff;
     font-family: Raleway;
     font-weight: 400;
@@ -466,7 +467,7 @@
   .about-image2 {
     align-self: center;
   }
-  .about-text8 {
+  .about-text10 {
     color: rgb(255, 255, 255);
     font-size: 60px;
     font-family: Montserrat;
@@ -492,7 +493,7 @@
   }
 }
 @media(max-width: 991px) {
-  .about-text1 {
+  .about-text03 {
     max-width: 100%;
   }
 }
@@ -512,7 +513,7 @@
     padding-left: 32px;
     padding-right: 32px;
   }
-  .about-text1 {
+  .about-text03 {
     padding-left: var(--dl-space-space-unit);
     padding-right: var(--dl-space-space-unit);
   }
@@ -535,7 +536,7 @@
     padding-top: var(--dl-space-space-fiveunits);
     padding-bottom: var(--dl-space-space-fiveunits);
   }
-  .about-text4 {
+  .about-text06 {
     text-align: center;
   }
   .about-image2 {

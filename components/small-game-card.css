@@ -1,0 +1,127 @@
+.small-game-card-blog-post-card {
+  width: auto;
+  display: flex;
+  max-width: 1400px;
+  min-width: auto;
+  box-shadow: 4px 4px 10px 0px rgba(18, 18, 18, 0.1);
+  transition: 0.3s;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  text-decoration: none;
+}
+.small-game-card-blog-post-card:hover {
+  width: auto;
+  min-width: auto;
+  transform: scale(1.02);
+}
+.small-game-card-image {
+  width: auto;
+  height: 350px;
+  align-self: center;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: var(--dl-radius-radius-radius24);
+}
+.small-game-card-container {
+  flex: 1;
+  width: 350px;
+  height: 349px;
+  display: flex;
+  align-self: flex-start;
+  align-items: flex-start;
+  padding-top: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  flex-direction: column;
+  padding-bottom: 32px;
+  justify-content: space-between;
+}
+.small-game-card-container1 {
+  width: 100%;
+  display: flex;
+  align-self: flex-start;
+  align-items: flex-start;
+  margin-bottom: 0px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.small-game-card-text {
+  color: var(--dl-color-gray-500);
+  align-self: stretch;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.small-game-card-text1 {
+  color: var(--dl-color-gray-500);
+  align-self: stretch;
+  font-weight: 300;
+}
+.small-game-card-container2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.small-game-card-profile {
+  flex: 1;
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+}
+.small-game-card-image1 {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: var(--dl-radius-radius-round);
+}
+.small-game-card-text3 {
+  font-style: normal;
+  font-weight: 600;
+  margin-left: var(--dl-space-space-halfunit);
+}
+.small-game-card-text4 {
+  color: var(--dl-color-gray-black);
+  display: none;
+  font-style: normal;
+  font-weight: 500;
+}
+@media(max-width: 1200px) {
+  .small-game-card-container1 {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media(max-width: 991px) {
+  .small-game-card-blog-post-card {
+    max-width: 1400px;
+    min-width: auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .small-game-card-container {
+    width: 300px;
+    max-width: 500px;
+    min-width: 300px;
+    background-color: #f9f9f9;
+  }
+}
+@media(max-width: 767px) {
+  .small-game-card-blog-post-card {
+    flex-direction: column;
+  }
+  .small-game-card-image {
+    width: 100%;
+  }
+}
+@media(max-width: 479px) {
+  .small-game-card-container2 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .small-game-card-text4 {
+    width: auto;
+  }
+}

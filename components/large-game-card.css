@@ -1,0 +1,129 @@
+.large-game-card-blog-post-card {
+  width: 100%;
+  display: flex;
+  max-width: 1400px;
+  min-width: 1000px;
+  box-shadow: 4px 4px 10px 0px rgba(18, 18, 18, 0.1);
+  transition: 0.3s;
+  align-items: stretch;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.large-game-card-blog-post-card:hover {
+  transform: scale(1.02);
+}
+.large-game-card-image {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 0px;
+}
+.large-game-card-container {
+  flex: 1;
+  width: 100%;
+  height: 349px;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  padding-top: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  flex-direction: column;
+  padding-bottom: 32px;
+  justify-content: space-between;
+}
+.large-game-card-container1 {
+  width: 100%;
+  display: flex;
+  align-self: flex-start;
+  align-items: flex-start;
+  margin-bottom: var(--dl-space-space-halfunit);
+  flex-direction: row;
+  justify-content: space-between;
+}
+.large-game-card-text {
+  color: var(--dl-color-gray-500);
+  align-self: stretch;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.large-game-card-text1 {
+  color: var(--dl-color-gray-500);
+  align-self: stretch;
+  font-weight: 300;
+}
+.large-game-card-text2 {
+  margin-bottom: 32px;
+}
+.large-game-card-text3 {
+  color: var(--dl-color-gray-500);
+  width: auto;
+  height: auto;
+  font-size: 1.25rem;
+  min-width: 100%;
+  min-height: auto;
+  margin-bottom: 32px;
+}
+.large-game-card-container2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.large-game-card-profile {
+  flex: 1;
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+}
+.large-game-card-image1 {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: var(--dl-radius-radius-round);
+}
+.large-game-card-text4 {
+  font-style: normal;
+  font-weight: 600;
+  margin-left: var(--dl-space-space-halfunit);
+}
+.large-game-card-text5 {
+  color: var(--dl-color-gray-black);
+  display: none;
+  font-style: normal;
+  font-weight: 500;
+}
+@media(max-width: 1200px) {
+  .large-game-card-container1 {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media(max-width: 991px) {
+  .large-game-card-blog-post-card {
+    max-width: 1400px;
+    min-width: 50%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media(max-width: 767px) {
+  .large-game-card-blog-post-card {
+    flex-direction: column;
+  }
+  .large-game-card-image {
+    width: 100%;
+  }
+}
+@media(max-width: 479px) {
+  .large-game-card-container2 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .large-game-card-text5 {
+    width: auto;
+  }
+}

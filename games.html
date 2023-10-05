@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Games - Landing Page</title>
+    <meta property="og:title" content="Games - Landing Page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Raleway;
+        font-size: 18px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.55;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <style>
+      html {
+      scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./games.css" rel="stylesheet" />
+
+      <div class="games-container">
+        <div data-role="Header" class="games-navbar-container">
+          <div class="games-navbar">
+            <div class="games-left-side">
+              <div data-role="BurgerMenu" class="games-burger-menu">
+                <svg viewBox="0 0 1024 1024" class="games-icon">
+                  <path
+                    d="M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z"
+                  ></path>
+                </svg>
+              </div>
+              <a href="index.html" class="games-navlink">
+                <img
+                  alt="image"
+                  src="public/logotransparent-400w.png"
+                  loading="eager"
+                  class="games-image"
+                />
+              </a>
+              <div class="games-links-container">
+                <a href="index.html" class="games-link">Home</a>
+                <a href="games.html" class="games-link1">Games</a>
+                <a href="community.html" class="games-link2">Community</a>
+                <a href="about.html" class="games-link3">About</a>
+              </div>
+            </div>
+            <div class="games-buttons">
+              <button class="games-login button">Login</button>
+              <button class="button">Register</button>
+            </div>
+            <div class="games-right-side"></div>
+          </div>
+        </div>
+        <div class="games-banner">
+          <h1 class="games-text">Featured Games</h1>
+          <div class="games-container1">
+            <div class="games-container2">
+              
+              <!-- The following code below is for the carousel/slideshow for recommended games. -->
+              <!-- This is located near the top of the page, under the text "Featured Games". -->
+              <style>
+                * {box-sizing: border-box}
+                body {font-family: Verdana, sans-serif; margin:0}
+                .mySlides {display: none}
+                img {vertical-align: middle;}
+
+                /* Slideshow container */
+                .slideshow-container {
+                  max-width: 1000px;
+                  position: relative;
+                  margin: auto;
+                }
+
+                /* Next & previous buttons */
+                .prev, .next {
+                  cursor: pointer;
+                  position: absolute;
+                  top: 50%;
+                  width: auto;
+                  padding: 16px;
+                  margin-top: -22px;
+                  color: white;
+                  font-weight: bold;
+                  font-size: 18px;
+                  transition: 0.6s ease;
+                  border-radius: 0 3px 3px 0;
+                  user-select: none;
+                }
+
+                /* Position the 'next button' to the right */
+                .next {
+                  right: 0;
+                  border-radius: 3px 0 0 3px;
+                }
+
+                /* On hover, add a black background color with a little bit see-through */
+                .prev:hover, .next:hover {
+                  background-color: rgba(0,0,0,0.8);
+                }
+
+                /* Caption text */
+                .text {
+                  color: #f2f2f2;
+                  font-size: 15px;
+                  padding: 8px 12px;
+                  position: absolute;
+                  bottom: 8px;
+                  width: 100%;
+                  text-align: center;
+                }
+
+                /* Number text (1/3 etc) */
+                .numbertext {
+                  color: #f2f2f2;
+                  font-size: 12px;
+                  padding: 8px 12px;
+                  position: absolute;
+                  top: 0;
+                }
+
+                /* The dots/bullets/indicators */
+                .dot {
+                  cursor: pointer;
+                  height: 15px;
+                  width: 15px;
+                  margin: 0 2px;
+                  background-color: #bbb;
+                  border-radius: 50%;
+                  display: inline-block;
+                  transition: background-color 0.6s ease;
+                }
+
+                .active, .dot:hover {
+                  background-color: #717171;
+                }
+
+                /* Fading animation */
+                .fade {
+                  animation-name: fade;
+                  animation-duration: 1.5s;
+                }
+
+                @keyframes fade {
+                  from {opacity: .4}
+                  to {opacity: 1}
+                }
+
+                /* On smaller screens, decrease text size */
+                @media only screen and (max-width: 300px) {
+                  .prev, .next,.text {font-size: 11px}
+                }
+              </style>
+
+              <!-- The first game shown in the slideshow. -->
+              <div class="slideshow-container">
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img
+                    src="javascriptgames/mlgbreakout/MLGBreakoutGIF.gif"
+                    style="width:100%; height:400px;"
+                  />
+                  <div class="text" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 50px; letter-spacing: 1px; border-style: solid; background:#000000; opacity:70%">MLG Breakout</div>
+                </div>
+
+              <!-- The second game shown in the slideshow. -->
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img
+                    src="javascriptgames/snake/WarSnakeGIF.gif"
+                    style="width:100%; height:400px;"
+                  />
+                  <div class="text" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 50px; letter-spacing: 1px; border-style: solid; background:#000000; opacity:70%">War Snake</div>
+                </div>
+
+              <!-- The third game shown in the slideshow. -->
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img
+                    src="javascriptgames/tetris/TetrisGIF.gif"
+                    style="width:100%; height:400px;"
+                  />
+                  <div class="text" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 50px; letter-spacing: 1px; border-style: solid; background:#000000; opacity:70%">Tetris</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+              </div>
+              <br />
+
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+              </div>
+
+              <script> //Note, everything inside <script> is Javascript-land. 
+                //That means comments are now denoted with "//", not <!-- -->.
+
+                //which slide the slideshow/carousel starts on.
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                //function required to move slide shows.
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName('mySlides');
+                  let dots = document.getElementsByClassName('dot');
+                  if (n > slides.length) {slideIndex = 1}
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = 'none';
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(' active', '');
+                  }
+                  slides[slideIndex-1].style.display = 'block';
+                  dots[slideIndex-1].className += ' active';
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+        <header data-thq="thq-navbar" class="games-navbar-interactive">
+          <div data-thq="thq-navbar-nav" class="games-desktop-menu">
+            <nav class="games-links">
+              <span class="games-text01">Action</span>
+              <span class="games-text02">Adventure</span>
+              <span class="games-text03">Shooter</span>
+              <span class="games-text04">Strategy</span>
+              <span class="games-text05">Puzzle</span>
+              <span class="games-text06">Sports</span>
+            </nav>
+          </div>
+          <div data-thq="thq-burger-menu" class="games-burger-menu">
+            <svg viewBox="0 0 1024 1024" class="games-icon02">
+              <path
+                d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+              ></path>
+            </svg>
+          </div>
+          <div data-thq="thq-mobile-menu" class="games-mobile-menu">
+            <div class="games-nav">
+              <div class="games-top">
+                <img
+                  alt="image"
+                  src="https://presentation-website-assets.teleporthq.io/logos/logo.png"
+                  class="games-logo"
+                />
+                <div data-thq="thq-close-menu" class="games-close-menu">
+                  <svg viewBox="0 0 1024 1024" class="games-icon04">
+                    <path
+                      d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <nav class="games-links1">
+                <span class="games-text07">About</span>
+                <span class="games-text08">Features</span>
+                <span class="games-text09">Pricing</span>
+                <span class="games-text10">Team</span>
+                <span class="games-text11">Blog</span>
+              </nav>
+              <div class="games-buttons1">
+                <button class="games-login1 button">Login</button>
+                <button class="button">Register</button>
+              </div>
+            </div>
+            <div>
+              <svg viewBox="0 0 950.8571428571428 1024" class="games-icon06">
+                <path
+                  d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                ></path></svg>
+                <svg viewBox="0 0 877.7142857142857 1024" class="games-icon08">
+                <path
+                  d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                ></path></svg>
+                <svg viewBox="0 0 602.2582857142856 1024" class="games-icon10">
+                <path
+                  d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </header>
+        <div class="games-banner1">
+          <h1 class="games-text12">Most Popular Games</h1>
+        </div>
+        <div class="games-blog">
+          
+          <!-- This Div class contains all the games on the left side of the most popular games. -->
+          <div class="games-container3">
+
+            <!-- Div class referencing the top-left game. -->
+            <a href="javascriptgames/mlgbreakout/index.html">
+              <div class="flex-game-card-blog-post-card flex-game-card-root-class-name">
+                <img
+                  alt="image"
+                  src="javascriptgames/mlgbreakout/mlgbackground.jpg"
+                  image_src="javascriptgames/mlgbreakout/MLGBreakoutGIF.gif"
+                  class="flex-game-card-image"
+                />
+                <div class="flex-game-card-container">
+                  <div class="flex-game-card-container1">
+                    <span class="flex-game-card-text"><span>Arcade</span></span>
+                    <span class="flex-game-card-text1">
+                      <span>April 2023</span>
+                    </span>
+                  </div>
+                  <h1 class="flex-game-card-text2"><span>MLG Breakout</span></h1>
+                  <span class="flex-game-card-text3">
+                    <span>Breakout but MLG</span>
+                  </span>
+                  <div class="flex-game-card-container2">
+                    <div class="flex-game-card-profile">
+                      <img
+                        alt="profile"
+                        src="public/llama.png"
+                        class="flex-game-card-image1"
+                      />
+                      <span class="flex-game-card-text4">
+                        <span>Michael Ng</span>
+                      </span>
+                    </div>
+                    <span class="flex-game-card-text5">Read More -&gt;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <!-- Div class referencing the middle-left game. -->
+            <a href="javascriptgames/tetris/tetris.html">
+              <div class="flex-game-card-blog-post-card flex-game-card-root-class-name4">
+                <img
+                  alt="image"
+                  src="javascriptgames/tetris/tetris.jpg"
+                  image_src="javascriptgames/tetris/TetrisGIF.gif"
+                  class="flex-game-card-image"
+                />
+                <div class="flex-game-card-container">
+                  <div class="flex-game-card-container1">
+                    <span class="flex-game-card-text"><span>Arcade</span></span>
+                    <span class="flex-game-card-text1">
+                      <span>October 2023</span>
+                    </span>
+                  </div>
+                  <h1 class="flex-game-card-text2"><span>Tetris</span></h1>
+                  <span class="flex-game-card-text3">
+                    <span>Classic Tetris</span>
+                  </span>
+                  <div class="flex-game-card-container2">
+                    <div class="flex-game-card-profile">
+                      <img
+                        alt="profile"
+                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&amp;ixlib=rb-1.2.1&amp;w=200"
+                        class="flex-game-card-image1"
+                      />
+                      <span class="flex-game-card-text4">
+                        <span>Jane Doe</span>
+                      </span>
+                    </div>
+                    <span class="flex-game-card-text5">Read More -&gt;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            
+            <!-- Div class referencing the bottom-left game. -->
+            <div class="flex-game-card-blog-post-card flex-game-card-root-class-name2">
+              <img
+                alt="image"
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&amp;ixlib=rb-1.2.1&amp;w=1500"
+                image_src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&amp;ixlib=rb-1.2.1&amp;h=1000"
+                class="flex-game-card-image"
+              />
+              <div class="flex-game-card-container">
+                <div class="flex-game-card-container1">
+                  <span class="flex-game-card-text"><span>Genre</span></span>
+                  <span class="flex-game-card-text1">
+                    <span>Date Uploaded</span>
+                  </span>
+                </div>
+                <h1 class="flex-game-card-text2"><span>Game Title</span></h1>
+                <span class="flex-game-card-text3">
+                  <span>Game Description</span>
+                </span>
+                <div class="flex-game-card-container2">
+                  <div class="flex-game-card-profile">
+                    <img
+                      alt="profile"
+                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&amp;ixlib=rb-1.2.1&amp;w=200"
+                      class="flex-game-card-image1"
+                    />
+                    <span class="flex-game-card-text4">
+                      <span>Jane Doe</span>
+                    </span>
+                  </div>
+                  <span class="flex-game-card-text5">Read More -&gt;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- This Div class contains all the games on the right side of the most popular games. -->
+          <div class="games-container4">
+
+            <!-- Div class referencing the top-right game. -->
+            <a href="javascriptgames/snake/index.html">
+              <div class="flex-game-card-blog-post-card flex-game-card-root-class-name1">
+                <img
+                  alt="image"
+                  src="javascriptgames/snake/War Snake.jpg"
+                  image_src="javascriptgames/snake/WarSnakeGIF.gif"
+                  class="flex-game-card-image"
+                />
+                <div class="flex-game-card-container">
+                  <div class="flex-game-card-container1">
+                    <span class="flex-game-card-text"><span>Arcade</span></span>
+                    <span class="flex-game-card-text1">
+                      <span>September 2023</span>
+                    </span>
+                  </div>
+                  <h1 class="flex-game-card-text2"><span>War Snake</span></h1>
+                  <span class="flex-game-card-text3">
+                    <span>Classic Snake</span>
+                  </span>
+                  <div class="flex-game-card-container2">
+                    <div class="flex-game-card-profile">
+                      <img
+                        alt="profile"
+                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&amp;ixlib=rb-1.2.1&amp;w=200"
+                        class="flex-game-card-image1"
+                      />
+                      <span class="flex-game-card-text4">
+                        <span>Jane Doe</span>
+                      </span>
+                    </div>
+                    <span class="flex-game-card-text5">Read More -&gt;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            
+
+            <!-- Div class referencing the middle-right game. -->
+            <div class="flex-game-card-blog-post-card flex-game-card-root-class-name3">
+              <img
+                alt="image"
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&amp;ixlib=rb-1.2.1&amp;w=1500"
+                image_src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&amp;ixlib=rb-1.2.1&amp;h=1000"
+                class="flex-game-card-image"
+              />
+              <div class="flex-game-card-container">
+                <div class="flex-game-card-container1">
+                  <span class="flex-game-card-text"><span>Genre</span></span>
+                  <span class="flex-game-card-text1">
+                    <span>Date Uploaded</span>
+                  </span>
+                </div>
+                <h1 class="flex-game-card-text2"><span>Game Title</span></h1>
+                <span class="flex-game-card-text3">
+                  <span>Game Description</span>
+                </span>
+                <div class="flex-game-card-container2">
+                  <div class="flex-game-card-profile">
+                    <img
+                      alt="profile"
+                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&amp;ixlib=rb-1.2.1&amp;w=200"
+                      class="flex-game-card-image1"
+                    />
+                    <span class="flex-game-card-text4">
+                      <span>Jane Doe</span>
+                    </span>
+                  </div>
+                  <span class="flex-game-card-text5">Read More -&gt;</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Div class referencing the bottom-right game. -->
+            <div class="flex-game-card-blog-post-card flex-game-card-root-class-name5">
+              <img
+                alt="image"
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&amp;ixlib=rb-1.2.1&amp;w=1500"
+                image_src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&amp;ixlib=rb-1.2.1&amp;h=1000"
+                class="flex-game-card-image"
+              />
+              <div class="flex-game-card-container">
+                <div class="flex-game-card-container1">
+                  <span class="flex-game-card-text"><span>Genre</span></span>
+                  <span class="flex-game-card-text1">
+                    <span>Date Uploaded</span>
+                  </span>
+                </div>
+                <h1 class="flex-game-card-text2"><span>Game Title</span></h1>
+                <span class="flex-game-card-text3">
+                  <span>Game Description</span>
+                </span>
+                <div class="flex-game-card-container2">
+                  <div class="flex-game-card-profile">
+                    <img
+                      alt="profile"
+                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&amp;ixlib=rb-1.2.1&amp;w=200"
+                      class="flex-game-card-image1"
+                    />
+                    <span class="flex-game-card-text4">
+                      <span>Jane Doe</span>
+                    </span>
+                  </div>
+                  <span class="flex-game-card-text5">Read More -&gt;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="games-footer-container">
+          <div class="games-footer">
+            <div class="games-social-links"></div>
+            <div class="games-copyright-container">
+              <svg viewBox="0 0 1024 1024" class="games-icon12">
+                <path
+                  d="M512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM506 390q-80 0-80 116v12q0 116 80 116 30 0 50-17t20-43h76q0 50-44 88-42 36-102 36-80 0-122-48t-42-132v-12q0-82 40-128 48-54 124-54 66 0 104 38 42 42 42 98h-76q0-14-6-26-10-20-14-24-20-20-50-20z"
+                ></path>
+              </svg>
+              <span class="Anchor">Copyright H8ful8, 2023</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+  </body>
+</html>
