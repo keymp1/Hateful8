@@ -4,16 +4,19 @@ _____________________________________________________________________
 
 **Description**
 _____________________________________________________________________
-One paragraph of project description goes here.
+BucStop is a project created by students. The purpose of the website  
+is for ETSU students to be able to play games in their spare time while
+while waiting for class or on their way to class. 
 
 **Prerequisites**
 _____________________________________________________________________
-Anything Required to run website/install
+Everything needed is directly on the website
 
 **Installation**
 _____________________________________________________________________
-How to install if applicable 
+No installation needed
 
 **Citation**
 _____________________________________________________________________
-Add any citations as needed
+Credit to Ben Smith, Matthew Lockard, Michael Ng, Kincaid Young, Caleb Hammmound,
+Maxwell Key, and Elainna Peay
