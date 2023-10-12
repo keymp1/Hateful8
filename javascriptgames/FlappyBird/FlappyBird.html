@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flappy Bird</title>
+    <style>
+
+        /* Reference https://www.youtube.com/watch?v=3SsYZDJdeXk*/
+        
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #game {
+            width: 400px;
+            height: 500px;
+            border: 1px solid black;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        #block {
+            width: 50px;
+            height: 500px;
+            background-color: green;
+            position: relative;
+            left: 100%;
+            animation: block 2s infinite linear;
+        }
+
+        @keyframes block {
+            0% {
+                left: 410%;
+            }
+            100% {
+                left: -50px;
+            }
+        }
+
+        #hole {
+            width: 50px;
+            height: 150px;
+            background-color: white;
+            position: relative;
+            left: 400px;
+            top: -500px;
+            animation: block 2s infinite linear;
+        }
+
+        #character {
+            width: 20px;
+            height: 20px;
+            background-color: yellow;
+            position: absolute;
+            top: 100px; 
+            border-radius: 50%;
+        }
+
+
+        #menu {
+        display: flex;
+        flex-direction: column;
+        padding: 80px;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url('image.jpeg'); /* Replace 'background.jpg' with the actual image file path */
+        background-size: cover; /* This will cover the entire div */
+        background-repeat: no-repeat; /* Prevent image repetition */
+    }
+
+    
+
+
+    </style>
+</head>
+
+<body onclick="jump()" onkeypress="jump(event)">
+    <div id="menu" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
+        <h1>Welcome to Flappy Bird</h1>
+        <br>
+        <button onclick="startGame()">Start</button>
+        <br>
+        <p> Use the space bar or click to jump</p>
+
+    </div>
+
+    <div id="game" style="display: none;">
+        <div id="block"></div>
+        <div id="hole"></div>
+        <div id="character"></div>
+    </div>
+
+    <script>
+        var block = document.getElementById("block");
+        var hole = document.getElementById("hole");
+        var character = document.getElementById("character");
+        var jumping = 0;
+        var counter = 0;
+        var gameStarted = false;
+
+        hole.addEventListener('animationiteration', () => {
+            var random = -((Math.random() * 300) + 150);
+            hole.style.top = random + "px";
+            counter++;
+        });
+
+        function gameLoop() {
+            if (gameStarted) {
+                var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+                if (jumping == 0) {
+                    character.style.top = (characterTop + 3) + "px";
+                }
+                var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+                var holeTop = parseInt(window.getComputedStyle(hole).getPropertyValue("top"));
+                var cTop = -(500 - characterTop);
+                if (characterTop > 480 || (blockLeft < 20 && blockLeft > -50 && (cTop < holeTop || cTop > holeTop + 130))) {
+                    alert("Game over. Score: " + (counter - 1));
+                    character.style.top = 100 + "px";
+                    counter = 0;
+                }
+            }
+        }
+
+        setInterval(gameLoop, 10);
+
+        function jump(event) {
+            if (event && event.type === "keypress" && event.key !== " ") {
+                return;
+            }
+
+            jumping = 1;
+            let jumpCount = 0;
+            var jumpInterval = setInterval(function () {
+                var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+                if (characterTop > 6 && jumpCount < 15) {
+                    character.style.top = (characterTop - 5) + "px";
+                }
+                if (jumpCount > 20) {
+                    clearInterval(jumpInterval);
+                    jumping = 0;
+                    jumpCount = 0;
+                }
+                jumpCount++;
+            }, 10);
+        }
+
+        function startGame() {
+            gameStarted = true;
+            document.getElementById("menu").style.display = "none";
+            document.getElementById("game").style.display = "block";
+        }
+    </script>
+</body>
+</html>
