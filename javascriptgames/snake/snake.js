@@ -37,6 +37,38 @@ Keyboard.ControllerEvents = function() {
 };
 
 /**
+ * Mobile Mapping 
+ *  
+ */
+var upButton= document.getElementById("upButton");
+var downButton= document.getElementById("downButton");
+var leftButton= document.getElementById("leftButton");
+var rightButton= document.getElementById("rightButton");
+
+/**
+ * Mobile Events 
+*/
+upButton.addEventListener("click", function (){
+  document.onkeydown = function(event) {
+    self.pressKey = event.which;
+  };
+  this.Component.stage.direction = 'up'
+});
+
+downButton.addEventListener("click", function (){
+
+});
+
+leftButton.addEventListener("click", function (){
+
+});
+
+rightButton.addEventListener("click", function (){
+
+});
+
+
+/**
  * Game Component Stage
  */
 Component.Stage = function(canvas, conf) {  
