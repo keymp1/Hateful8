@@ -20,7 +20,6 @@ Keyboard.Keymap = {
  * Keyboard Events
  */
 Keyboard.ControllerEvents = function() {
-  
   // Setts
   var self      = this;
   this.pressKey = null;
@@ -56,7 +55,7 @@ upButton.addEventListener("click", function (){
 });
 
 downButton.addEventListener("click", function (){
-direction = 'down';
+  direction = 'down';
   console.log("Down button was pressed. ");
 });
 
@@ -172,6 +171,7 @@ Game.Draw = function(context, snake) {
     var nx = snake.stage.length[0].x;
     var ny = snake.stage.length[0].y;
     
+
     // Add position by stage direction
     switch (direction) {
       case 'right':
