@@ -4,6 +4,7 @@
 var Game      = Game      || {};
 var Keyboard  = Keyboard  || {}; 
 var Component = Component || {};
+var direction = 'right';
 
 /**
  * Keyboard Map
@@ -49,22 +50,26 @@ var rightButton= document.getElementById("rightButton");
  * Mobile Events 
 */
 upButton.addEventListener("click", function (){
-  document.onkeydown = function(event) {
-    self.pressKey = event.which;
-  };
-  this.Component.stage.direction = 'up'
+  direction = 'up';
+
+  console.log("Up button was pressed.");
 });
 
 downButton.addEventListener("click", function (){
-
+direction = 'down';
+  console.log("Down button was pressed. ");
 });
 
 leftButton.addEventListener("click", function (){
+  direction = 'left';
 
+  console.log("Left button was pressed. ");
 });
 
 rightButton.addEventListener("click", function (){
+  direction = 'right';
 
+  console.log("Right button was pressed. ");
 });
 
 
@@ -156,7 +161,7 @@ Game.Draw = function(context, snake) {
     // Check Keypress And Set Stage direction
     var keyPress = snake.stage.keyEvent.getKey(); 
     if (typeof(keyPress) != 'undefined') {
-      snake.stage.direction = keyPress;
+      direction = keyPress;
     }
     
     // Draw White Stage
@@ -168,7 +173,7 @@ Game.Draw = function(context, snake) {
     var ny = snake.stage.length[0].y;
     
     // Add position by stage direction
-    switch (snake.stage.direction) {
+    switch (direction) {
       case 'right':
         nx++;
         break;
