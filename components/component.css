@@ -1,4 +1,4 @@
-.component-container {
+.app-component-container {
   width: 100%;
   height: 400px;
   display: flex;
@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: flex-start;
 }
-.component-container1 {
+.app-component-container1 {
   flex: 0 0 auto;
   width: auto;
   height: auto;
@@ -15,7 +15,7 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
-.component-container2 {
+.app-component-container2 {
   flex: 0 0 auto;
   width: auto;
   border: 2px dashed rgba(120, 120, 120, 0.4);
@@ -24,7 +24,7 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
-.component-container3 {
+.app-component-container3 {
   width: 200px;
   border: 2px dashed rgba(120, 120, 120, 0.4);
   height: 413px;
@@ -36,22 +36,22 @@
   background-position: center;
 }
 @media(max-width: 1200px) {
-  .component-container1 {
+  .app-component-container1 {
     width: 1183px;
     height: 413px;
     position: relative;
     margin-right: 0px;
   }
-  .component-container3 {
+  .app-component-container3 {
     width: 526px;
     height: 433px;
   }
-  .component-text {
+  .app-component-text {
     top: 135px;
     left: 831px;
     position: absolute;
   }
-  .component-text1 {
+  .app-component-text1 {
     top: 33px;
     left: 779px;
     position: absolute;
