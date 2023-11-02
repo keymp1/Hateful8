@@ -1,0 +1,37 @@
+.list-item-leaderboard-container {
+  gap: var(--dl-space-space-unit);
+  width: 300px;
+  height: auto;
+  display: flex;
+  position: relative;
+  max-width: 100%;
+  min-width: 400px;
+  align-items: center;
+  padding-left: var(--dl-space-space-doubleunit);
+  padding-right: var(--dl-space-space-doubleunit);
+  flex-direction: row;
+}
+.list-item-leaderboard-container1 {
+  flex: 1;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+}
+.list-item-leaderboard-text {
+  font-size: 24px;
+  align-self: center;
+  font-family: "Raleway";
+  padding-right: var(--dl-space-space-doubleunit);
+}
+.list-item-leaderboard-text1 {
+  font-size: 24px;
+  align-self: flex-start;
+  font-family: "Raleway";
+}
+.list-item-leaderboard-text2 {
+  font-size: 24px;
+  align-self: flex-start;
+  text-align: center;
+}

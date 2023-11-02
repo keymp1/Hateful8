@@ -1,18 +1,22 @@
-<!-- 
-  index.html
-  Filepath:   index.html
-
-  Author Name:    Michael Ng
-  Date Created:   10/10/2023
-  Last Modified:  10/10/2023
-  Description:    index webpage for the BucStop website. Links to Javascript games.
-  Tools:          Layout created using TeleportHQ.
- -->
+<!--
+ * -------------------------------------------------------------------
+ *  File name:      index.html
+ *  Filepath:       index.html
+ *  Project name:   Games Website
+ * -------------------------------------------------------------------
+ *      Publisher name and email:	Michael Ng, ngmw01@etsu.edu
+ *      Creation Date:              10/10/2023
+ *      Last Modified:              11/2/2023
+ *      Description:                This games webpage is also the homepage - it hosts a few games, has a carousel, and a leaderboard.
+ *      Version:                    V1.0
+ * -------------------------------------------------------------------
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Landing Page</title>
-    <meta property="og:title" content="Landing Page" />
+    <title>Games - Landing Page</title>
+    <meta property="og:title" content="Games - Landing Page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -40,12 +44,27 @@
     </style>
     <link
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
       data-tag="font"
     />
     <link
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
       data-tag="font"
     />
     <link
@@ -64,353 +83,548 @@
     <div>
       <link href="./index.css" rel="stylesheet" />
 
-      <div class="home-container">
-        <div data-role="Header" class="home-navbar-container">
-          <div class="home-navbar">
-            <div class="home-left-side">
-              <div data-role="BurgerMenu" class="home-burger-menu">
-                <svg viewBox="0 0 1024 1024" class="home-icon">
-                  <path
-                    d="M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z"
-                  ></path>
-                </svg>
-              </div>
-              <a href="index.html" class="home-navlink">
-                <img
-                  alt="image"
-                  src="public/logotransparent-400w.png"
-                  loading="eager"
-                  class="home-image"
-                />
-              </a>
-              <div class="home-links-container">
-                <a href="index.html" class="home-link">Home</a>
-                <a href="games.html" class="home-link01">Games</a>
-                <a href="community.html" class="home-link02">Community</a>
-                <a href="about.html" class="home-link03">About</a>
-              </div>
+      <div class="games-container">
+        <div data-role="Header" class="games-navbar-container">
+          <div class="games-navbar">
+            <div class="games-buttons">
+              <button class="games-login button">Login</button>
+              <button class="button">Register</button>
             </div>
-            <div class="home-right-side"></div>
-            <div data-role="MobileMenu" class="home-mobile-menu">
-              <div class="home-container1">
+            <a href="index.html" class="games-navlink">
+              <img
+                alt="image"
+                src="public/logotransparent-600w2.png"
+                loading="eager"
+                class="games-image button img"
+              />
+            </a>
+            <!-- This div contains links to the other pages.  -->
+            <div class="games-links-container">
+              <a href="about.html" class="games-link">About</a>
+              <a href="index.html" class="games-link2">Games</a>
+              <a href="community.html" class="games-link3">Community</a>
+            </div>
+          </div>
+        </div>
+        <div class="games-container1">
+          <div class="games-container2">
+            <style>
+              * {
+                box-sizing: border-box;
+              }
+              body {
+                font-family: Verdana, sans-serif;
+                margin: 0;
+              }
+              .mySlides {
+                display: none;
+              }
+              img {
+                margin: auto;
+                position: absolute;
+                left:0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                height: 500px;
+                width: 150px;
+              }
+
+              /* Slideshow container */
+              .slideshow-container {
+                position: relative;
+                min-height: 500px;
+                height: 500px;
+                margin: auto;
+              }
+
+              /* Next & previous buttons */
+              .prev,
+              .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+              }
+
+              /* Position the 'next button' to the right */
+              .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+              }
+
+              /* On hover, add a black background color with a little bit see-through */
+              .prev:hover,
+              .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+              }
+
+              /* Caption text */
+              .text {
+                color: #f2f2f2;
+                font-size: 20px;
+                padding: 8px 12px;
+                position: absolute;
+                width: 100%;
+                bottom: 30px;
+                text-align: center;
+                font-family: "Source Sans 3";
+                border-radius: var(--dl-radius-radius-radius8);
+                color: black;
+                background-color: rgba(255, 255, 255, 0.75);
+              }
+
+              /* Number text (1/3 etc) */
+              .numbertext {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+              }
+
+              /* The dots/bullets/indicators */
+              .dot {
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+              }
+
+              .active,
+              .dot:hover {
+                background-color: #717171;
+              }
+
+              /* Fading animation */
+              .fade {
+                animation-name: fade;
+                animation-duration: 1.5s;
+              }
+
+              @keyframes fade {
+                from {
+                  opacity: 0.4;
+                }
+                to {
+                  opacity: 1;
+                }
+              }
+
+              /* On smaller screens, decrease text size */
+              @media only screen and (max-width: 300px) {
+                .prev,
+                .next,
+                .text {
+                  font-size: 11px;
+                }
+              }
+            </style>
+
+              <!-- The HTML Code for the Carousel (Slideshow in the ribbon) -->
+            <div class="slideshow-container">
+
+              <!-- The First Slide in the Carousel - MLG Breakout -->
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <a href="javascriptgames/mlgbreakout/index.html">
+                  <img
+                    src="javascriptgames/mlgbreakout/MLGBreakoutGIF.gif"
+                    style="width: 100%"
+                  />
+                </a>
+                <div class="text">MLG Breakout</div>
+              </div>
+
+              <!-- The Second Slide in the Carousel - War Snake -->
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <a href="javascriptgames/snake/index.html">
+                  <img
+                    src="javascriptgames/snake/WarSnakeGIF.gif"
+                    style="width: 100%"
+                  />
+                </a>
+                <div class="text">War Snake</div>
+              </div>
+
+              <!-- The Third Slide in the Carousel - Tetris -->
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <a href="javascriptgames/tetris/tetris.html">
+                  <img
+                    src="javascriptgames/tetris/TetrisGIF.gif"
+                    style="width: 100%"
+                  />
+                </a>
+                <div class="text">Tetris</div>
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">❮</a>
+              <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+            <br />
+
+            <div style="text-align:center; margin-top: -60px; position:relative;">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+            <script>
+              let slideIndex = 1;
+              showSlides(slideIndex);
+
+              function plusSlides(n) {
+                showSlides((slideIndex += n));
+              }
+
+              function currentSlide(n) {
+                showSlides((slideIndex = n));
+              }
+
+              function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName('mySlides');
+                let dots = document.getElementsByClassName('dot');
+                if (n > slides.length) {
+                  slideIndex = 1;
+                }
+                if (n < 1) {
+                  slideIndex = slides.length;
+                }
+                for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = 'none';
+                }
+                for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(' active', '');
+                }
+                slides[slideIndex - 1].style.display = 'block';
+                dots[slideIndex - 1].className += ' active';
+              }
+            </script>
+          </div>
+        </div>
+        <header data-thq="thq-navbar" class="games-navbar-interactive">
+          <div data-thq="thq-navbar-nav" class="games-desktop-menu">
+            <nav class="games-links">
+              <span class="games-text">Action</span>
+              <span class="games-text01">Adventure</span>
+              <span class="games-text02">Shooter</span>
+              <span class="games-text03">Strategy</span>
+              <span class="games-text04">Puzzle</span>
+              <span class="games-text05">Sports</span>
+            </nav>
+          </div>
+          <div data-thq="thq-burger-menu" class="games-burger-menu">
+            <svg viewBox="0 0 1024 1024" class="games-icon">
+              <path
+                d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+              ></path>
+            </svg>
+          </div>
+          <div data-thq="thq-mobile-menu" class="games-mobile-menu">
+            <div class="games-nav">
+              <div class="games-top">
                 <img
                   alt="image"
-                  src="https://play.teleporthq.io/static/svg/default-img.svg"
-                  class="home-image1"
+                  src="public/logotransparent-600w2.png"
+                  class="games-logo"
                 />
-                <div data-role="CloseMobileMenu" class="home-close-menu">
-                  <svg viewBox="0 0 1024 1024" class="home-icon02">
+                <div data-thq="thq-close-menu" class="games-close-menu">
+                  <svg viewBox="0 0 1024 1024" class="games-icon02">
                     <path
                       d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
                     ></path>
                   </svg>
                 </div>
               </div>
-              <div class="home-links-container1">
-                <span class="home-link04 Anchor">Resources</span>
-                <span class="home-link05 Anchor">Inspiration</span>
-                <span class="home-link06 Anchor">Process</span>
-                <span class="home-link07 Anchor">Our story</span>
+              <nav class="games-links1">
+                <span class="games-text06">About</span>
+                <span class="games-text07">Features</span>
+                <span class="games-text08">Pricing</span>
+                <span class="games-text09">Team</span>
+                <span class="games-text10">Blog</span>
+              </nav>
+              <div class="games-buttons1">
+                <button class="games-login1 button">Login</button>
+                <button class="button">Register</button>
               </div>
+            </div>
+            <div>
+              <svg viewBox="0 0 950.8571428571428 1024" class="games-icon04">
+                <path
+                  d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                ></path></svg><svg viewBox="0 0 877.7142857142857 1024" class="games-icon06">
+                <path
+                  d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                ></path></svg><svg viewBox="0 0 602.2582857142856 1024" class="games-icon08">
+                <path
+                  d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </header>
+        <div class="games-container3">
+          <div class="games-blog">
+            <h1 class="games-text11">Recent Games</h1>
+                
+            <!-- Div class containing the containers for games on the left section and right section. -->
+            <div class="games-large-games-container">
+                
+              <!-- Div class containing all the games on the left side of the recent games section. -->
+              <div class="games-left-container">
+                
+                <!-- Div class referencing the top-left game. -->
+                <a href="javascriptgames/mlgbreakout/index.html">
+                  <div class="small-game-card-blog-post-card small-game-card-root-class-name3">
+                    <!-- This Div Class references the game on the top-left. -->
+                    <div class="small-game-card-container">
+                      <img
+                        alt="mlg breakout background"
+                        src="javascriptgames/mlgbreakout/mlgbackground.jpg"
+                        onmouseover="this.src='javascriptgames/mlgbreakout/MLGBreakoutGIF.gif';" 
+                        onmouseout="this.src='javascriptgames/mlgbreakout/mlgbackground.jpg';" 
+                        class="small-game-card-image img"
+                      />
+                      <h1 class="small-game-card-text">
+                        <span>MLG Breakout</span>
+                      </h1>
+                    </div>
+                  </div>
+                </a>
+                
+                <!-- Div class referencing the middle-left game. -->
+                <a href="javascriptgames/tetris/tetris.html">
+                  <div class="small-game-card-blog-post-card small-game-card-root-class-name4">
+                    <div class="small-game-card-container">
+                      <img
+                        alt="Tetris Game Image"
+                        src="javascriptgames/tetris/tetris.jpg"
+                        onmouseover="this.src='javascriptgames/tetris/TetrisGIF.gif';" 
+                        onmouseout="this.src='javascriptgames/tetris/tetris.jpg';" 
+                        class="small-game-card-image img"
+                      />
+                      <h1 class="small-game-card-text">
+                        <span>Tetris</span>
+                      </h1>
+                    </div>
+                  </div>
+                </a>
+                
+                <!-- Div class referencing the bottom-left game. -->
+                <a href="https://google.com">
+                  <div class="small-game-card-blog-post-card small-game-card-root-class-name5">
+                    <div class="small-game-card-container">
+                      <img
+                        alt="image"
+                        src="https://play.teleporthq.io/static/svg/default-img.svg"
+                        class="small-game-card-image img"
+                      />
+                      <h1 class="small-game-card-text">
+                        <span>GameName</span>
+                      </h1>
+                    </div>
+                  </div>
+                </a>
+              </div>
+                
+              <!-- Div class containing all the games on the right side of the recent games section. -->
+              <div class="games-right-container">
+
+                <!-- Div class referencing the top-right game. -->
+                <a href="javascriptgames/snake/index.html">
+                  <div class="small-game-card-blog-post-card small-game-card-root-class-name6">
+                    <div class="small-game-card-container">
+                      <img
+                        alt="War Snake Image"
+                        src="javascriptgames/snake/War Snake.jpg"
+                        onmouseover="this.src='javascriptgames/snake/WarSnakeGIF.gif';" 
+                        onmouseout="this.src='javascriptgames/snake/War Snake.jpg';" 
+                        class="small-game-card-image img"
+                      />
+                      <h1 class="small-game-card-text">
+                        <span>War Snake</span>
+                      </h1>
+                    </div>
+                  </div>
+                </a>
+                
+                <!-- Div class referencing the middle-right game. -->
+                <a href="https://google.com">
+                  <div class="small-game-card-blog-post-card small-game-card-root-class-name7">
+                    <div class="small-game-card-container">
+                      <img
+                        alt="image"
+                        src="https://play.teleporthq.io/static/svg/default-img.svg"
+                        class="small-game-card-image img"
+                      />
+                      <h1 class="small-game-card-text">
+                        <span>GameName</span>
+                      </h1>
+                    </div>
+                  </div>
+                </a>
+                
+                <!-- Div class referencing the bottom-right game. -->
+                <a href="https://google.com">
+                  <div class="small-game-card-blog-post-card small-game-card-root-class-name8">
+                    <div class="small-game-card-container">
+                      <img
+                        alt="image"
+                        src="https://play.teleporthq.io/static/svg/default-img.svg"
+                        class="small-game-card-image img"
+                      />
+                      <h1 class="small-game-card-text">
+                        <span>GameName</span>
+                      </h1>
+                    </div>
+                  </div>
+                </a>
+              </div> <!-- end div class for the right container.. -->
+            </div> <!-- end div class for the container containing both containers. -->
+            <a href="index.html" class="games-navlink1">
+              <h1 class="games-text12">See More</h1>
+            </a>
+          </div>
+
+          <!-- The Div Class containing the -->
+          <div class="games-leader-board">
+            <h1 class="games-text13">Leaderboard</h1>
+            <div class="list-item-leaderboard-container">
+              <div class="list-item-leaderboard-container1">
+                <span class="list-item-leaderboard-text"><span>1.</span></span>
+                <span class="list-item-leaderboard-text1">
+                  <span>GameName</span>
+                </span>
+              </div>
+              <span class="list-item-leaderboard-text2">
+                <span>4.23/5.00</span>
+              </span>
+            </div>
+            <div class="list-item-leaderboard-container">
+              <div class="list-item-leaderboard-container1">
+                <span class="list-item-leaderboard-text"><span>2.</span></span>
+                <span class="list-item-leaderboard-text1">
+                  <span>GameName</span>
+                </span>
+              </div>
+              <span class="list-item-leaderboard-text2">
+                <span>4.23/5.00</span>
+              </span>
+            </div>
+            <div class="list-item-leaderboard-container">
+              <div class="list-item-leaderboard-container1">
+                <span class="list-item-leaderboard-text"><span>3.</span></span>
+                <span class="list-item-leaderboard-text1">
+                  <span>GameName</span>
+                </span>
+              </div>
+              <span class="list-item-leaderboard-text2">
+                <span>4.23/5.00</span>
+              </span>
+            </div>
+            <div class="list-item-leaderboard-container">
+              <div class="list-item-leaderboard-container1">
+                <span class="list-item-leaderboard-text"><span>4.</span></span>
+                <span class="list-item-leaderboard-text1">
+                  <span>GameName</span>
+                </span>
+              </div>
+              <span class="list-item-leaderboard-text2">
+                <span>4.23/5.00</span>
+              </span>
+            </div>
+            <div class="list-item-leaderboard-container">
+              <div class="list-item-leaderboard-container1">
+                <span class="list-item-leaderboard-text"><span>5.</span></span>
+                <span class="list-item-leaderboard-text1">
+                  <span>GameName</span>
+                </span>
+              </div>
+              <span class="list-item-leaderboard-text2">
+                <span>4.23/5.00</span>
+              </span>
+            </div>
+            <div class="list-item-leaderboard-container">
+              <div class="list-item-leaderboard-container1">
+                <span class="list-item-leaderboard-text"><span>6.</span></span>
+                <span class="list-item-leaderboard-text1">
+                  <span>GameName</span>
+                </span>
+              </div>
+              <span class="list-item-leaderboard-text2">
+                <span>4.23/5.00</span>
+              </span>
+            </div>
+            <div class="list-item-leaderboard-container">
+              <div class="list-item-leaderboard-container1">
+                <span class="list-item-leaderboard-text"><span>7.</span></span>
+                <span class="list-item-leaderboard-text1">
+                  <span>GameName</span>
+                </span>
+              </div>
+              <span class="list-item-leaderboard-text2">
+                <span>4.23/5.00</span>
+              </span>
+            </div>
+            <div class="list-item-leaderboard-container">
+              <div class="list-item-leaderboard-container1">
+                <span class="list-item-leaderboard-text"><span>8.</span></span>
+                <span class="list-item-leaderboard-text1">
+                  <span>GameName</span>
+                </span>
+              </div>
+              <span class="list-item-leaderboard-text2">
+                <span>4.23/5.00</span>
+              </span>
+            </div>
+            <div class="list-item-leaderboard-container">
+              <div class="list-item-leaderboard-container1">
+                <span class="list-item-leaderboard-text"><span>9.</span></span>
+                <span class="list-item-leaderboard-text1">
+                  <span>GameName</span>
+                </span>
+              </div>
+              <span class="list-item-leaderboard-text2">
+                <span>4.23/5.00</span>
+              </span>
+            </div>
+            <div class="list-item-leaderboard-container">
+              <div class="list-item-leaderboard-container1">
+                <span class="list-item-leaderboard-text"><span>10.</span></span>
+                <span class="list-item-leaderboard-text1">
+                  <span>GameName</span>
+                </span>
+              </div>
+              <span class="list-item-leaderboard-text2">
+                <span>4.23/5.00</span>
+              </span>
             </div>
           </div>
         </div>
-        <div class="home-gallery">
-
-          <!-- This Div class represents the top-left card in this gallery.-->
-          <div class="gallery-card1-gallery-card gallery-card1-root-class-name">
-            <img
-              alt="horsechickengif"
-              src="public/gif-1500w.gif"
-              class="gallery-card1-image"
-            />
-            <h2 class="gallery-card1-text"><span>Example Game</span></h2>
-            <span class="gallery-card1-text1">
-              <span>A Gif to Show you can have Gifs as Images</span>
-            </span>
-          </div>
-
-          <!-- An anchor element that links the div class below to the MLG Breakout Game. -->
-          <a href="javascriptgames\mlgbreakout\index.html">
-          <!-- This Div class represents the top-middle card in this gallery.-->
-            <div class="gallery-card1-gallery-card gallery-card1-root-class-name3">
-              <img
-                alt="image"
-                src="javascriptgames/mlgbreakout/MLGBreakoutGIF.gif"
-                class="gallery-card1-image"
-              />
-              <h2 class="gallery-card1-text"><span>MLG Breakout</span></h2>
-              <span class="gallery-card1-text1">
-                <span>Breakout but MLG</span>
-              </span>
-            </div>
-          </a>
-
-          
-          <!-- An anchor element that links the div class below to the War Snake game. -->
-          <a href="javascriptgames/snake/index.html">
-            <!-- This Div class represents the top-right card in this gallery.-->
-            <div class="gallery-card1-gallery-card gallery-card1-root-class-name1">
-              <img
-                alt="image"
-                src="javascriptgames/snake/WarSnakeGIF.gif"
-                class="gallery-card1-image"
-              />
-              <h2 class="gallery-card1-text"><span>War Snake</span></h2>
-              <span class="gallery-card1-text1">
-                <span>War Snake</span>
-              </span>
-            </div>
-          </a>
-        </a>
-        
-        <!-- An anchor element that links the div class below to the War Snake game. -->
-        <a href="javascriptgames/tetris/tetris.html">
-          <!-- This Div class represents the bottom-left card in this gallery.-->
-          <div class="gallery-card1-gallery-card gallery-card1-root-class-name1">
-            <img
-              alt="image"
-              src="javascriptgames/tetris/TetrisGIF.gif"
-              class="gallery-card1-image"
-            />
-            <h2 class="gallery-card1-text"><span>Tetris</span></h2>
-            <span class="gallery-card1-text1">
-              <span>Tetris</span>
-            </span>
-          </div>
-        </a>
-        
-
-        <a href="javascriptgames/FlappyBird/FlappyBird.html">
-          <!-- This Div class represents the bottom-middle card in this gallery.-->
-          <div class="gallery-card1-gallery-card gallery-card1-root-class-name2">
-            <img
-              alt="image"
-              src="javascriptgames/FlappyBird/FlappyBirdGIF.gif"
-              class="gallery-card1-image"
-            />
-            <h2 class="gallery-card1-text"><span>Flappy Bird</span></h2>
-            <span class="gallery-card1-text1">
-              <span>Flappy Bird</span>
-            </span>
-          </div>
-        </a>
-        
-          <!-- This Div class represents the bottom-right card in this gallery.-->
-          <div class="gallery-card1-gallery-card gallery-card1-root-class-name5">
-            <img
-              alt="image"
-              src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDEyfHxmb3Jlc3R8ZW58MHx8fHwxNjI2MjUxMjg4&amp;ixlib=rb-1.2.1&amp;w=1500"
-              class="gallery-card1-image"
-            />
-            <h2 class="gallery-card1-text"><span>Project Title</span></h2>
-            <span class="gallery-card1-text1">
-              <span>Lorem ipsum dolor sit amet</span>
-            </span>
-          </div>
-        </div>
-        <div class="home-team">
-          <div class="home-heading-container">
-            <h1 class="home-text">Meet the Team</h1>
-            <span class="home-text1 Section-Text">
-              Lorme ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              nec odio. Praesent libero.
-            </span>
-          </div>
-          <div class="home-cards-container">
-            <div class="home-container2">
-
-              <!-- Card Container Div for Maxwell's card -->
-              <div class="team-card-team-card">
-                <div class="team-card-avatar-container">
-                  <svg viewBox="0 0 1024 1024" class="team-card-icon">
-                    <path
-                      d="M576 706.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
-                    ></path>
-                  </svg>
-                </div>
-                <span class="team-card-name Card-Heading">
-                  <span>Maxwell</span>
-                </span>
-                <span class="team-card-position Card-Text">
-                  <span>Position</span>
-                </span>
-              </div>
-            </div>
-
-              <!-- Card Container Div for Michael's card -->
-            <div class="team-card-team-card team-card-root-class-name">
-              <img src="public/llama.png" style="border-radius: 50%; margin-bottom: 24px;" alt="">
-              <span class="team-card-name Card-Heading">
-                <span>Michael</span>
-              </span>
-              <span class="team-card-position Card-Text">
-                <span>Position</span>
-              </span>
-            </div>
-
-            <!-- Card Container Div for Elainna's card -->
-            <div class="home-container3">
-              <div class="team-card-team-card team-card-root-class-name1">
-                <div class="team-card-avatar-container">
-                  <svg viewBox="0 0 1024 1024" class="team-card-icon">
-                    <path
-                      d="M576 706.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
-                    ></path>
-                  </svg>
-                </div>
-                <span class="team-card-name Card-Heading">
-                  <span>Elainna</span>
-                </span>
-                <span class="team-card-position Card-Text">
-                  <span>Position</span>
-                </span>
-              </div>
-            </div>
-
-            <!-- Card Container Div for Caleb's card -->
-            <div class="home-container4">
-              <div class="team-card-team-card team-card-root-class-name2">
-                <div class="team-card-avatar-container">
-                  <svg viewBox="0 0 1024 1024" class="team-card-icon">
-                    <path
-                      d="M576 706.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
-                    ></path>
-                  </svg>
-                </div>
-                <span class="team-card-name Card-Heading">
-                  <span>Caleb</span>
-                </span>
-                <span class="team-card-position Card-Text">
-                  <span>Position</span>
-                </span>
-              </div>
-            </div>
-
-            <!-- Card Container Div for Matthew's card -->
-            <div class="team-card-team-card team-card-root-class-name3">
-              <div class="team-card-avatar-container">
-                <svg viewBox="0 0 1024 1024" class="team-card-icon">
-                  <path
-                    d="M576 706.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
-                  ></path>
-                </svg>
-              </div>
-              <span class="team-card-name Card-Heading">
-                <span>Matthew</span>
-              </span>
-              <span class="team-card-position Card-Text">
-                <span>Position</span>
-              </span>
-            </div>
-
-            <!-- Card Container Div for Ben's card -->
-            <div class="team-card-team-card team-card-root-class-name4">
-              <div class="team-card-avatar-container">
-                <svg viewBox="0 0 1024 1024" class="team-card-icon">
-                  <path
-                    d="M576 706.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
-                  ></path>
-                </svg>
-              </div>
-              <span class="team-card-name Card-Heading">
-                <span>Ben</span>
-              </span>
-              <span class="team-card-position Card-Text">
-                <span>Position</span>
-              </span>
-            </div>
-
-            <!-- Card Container Div for Kincaid's card -->
-            <div class="team-card-team-card team-card-root-class-name5">
-              <div class="team-card-avatar-container">
-                <svg viewBox="0 0 1024 1024" class="team-card-icon">
-                  <path
-                    d="M576 706.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
-                  ></path>
-                </svg>
-              </div>
-              <span class="team-card-name Card-Heading">
-                <span>Kincaid</span>
-              </span>
-              <span class="team-card-position Card-Text">
-                <span>Position</span>
-              </span>
-            </div>
-            <div class="home-container5"></div>
-          </div>
-        </div>
-        <div class="home-get-in-touch">
-          <div class="home-container6">
-            <h2 class="home-text2">
-              <span>Get In Touch</span>
-            </h2>
-          </div>
-          <div class="home-content-container">
-            <div class="home-form-container">
-              <span class="home-heading BigCard-Heading">
-                Send us a message
-              </span>
-              <input
-                type="text"
-                required="true"
-                placeholder="Name"
-                class="home-name input"
-              />
-              <input
-                type="text"
-                required="true"
-                placeholder="E-mail"
-                class="home-email input"
-              />
-              <textarea
-                placeholder="Your Message"
-                class="home-message textarea"
-              ></textarea>
-              <button class="home-cta-btn Anchor button">SEND</button>
-            </div>
-            <div class="home-locations-container">
-              <div class="home-location-1">
-                <span class="home-heading1">London, UK</span>
-                <div class="home-adress">
-                  <svg viewBox="0 0 1024 1024" class="home-icon04">
-                    <path
-                      d="M512 0c-176.732 0-320 143.268-320 320 0 320 320 704 320 704s320-384 320-704c0-176.732-143.27-320-320-320zM512 512c-106.040 0-192-85.96-192-192s85.96-192 192-192 192 85.96 192 192-85.96 192-192 192z"
-                    ></path>
-                  </svg>
-                  <span class="home-text5 Section-Text">Address</span>
-                </div>
-                <div class="home-email1">
-                  <svg viewBox="0 0 1024 1024" class="home-icon06">
-                    <path
-                      d="M854 342v-86l-342 214-342-214v86l342 212zM854 170q34 0 59 26t25 60v512q0 34-25 60t-59 26h-684q-34 0-59-26t-25-60v-512q0-34 25-60t59-26h684z"
-                    ></path>
-                  </svg>
-                  <span class="home-text6 Section-Text">E-mail Address</span>
-                </div>
-                <div class="home-phone">
-                  <svg viewBox="0 0 804.5714285714286 1024" class="home-icon08">
-                    <path
-                      d="M804.571 708.571c0 20.571-9.143 60.571-17.714 79.429-12 28-44 46.286-69.714 60.571-33.714 18.286-68 29.143-106.286 29.143-53.143 0-101.143-21.714-149.714-39.429-34.857-12.571-68.571-28-100-47.429-97.143-60-214.286-177.143-274.286-274.286-19.429-31.429-34.857-65.143-47.429-100-17.714-48.571-39.429-96.571-39.429-149.714 0-38.286 10.857-72.571 29.143-106.286 14.286-25.714 32.571-57.714 60.571-69.714 18.857-8.571 58.857-17.714 79.429-17.714 4 0 8 0 12 1.714 12 4 24.571 32 30.286 43.429 18.286 32.571 36 65.714 54.857 97.714 9.143 14.857 26.286 33.143 26.286 50.857 0 34.857-103.429 85.714-103.429 116.571 0 15.429 14.286 35.429 22.286 49.143 57.714 104 129.714 176 233.714 233.714 13.714 8 33.714 22.286 49.143 22.286 30.857 0 81.714-103.429 116.571-103.429 17.714 0 36 17.143 50.857 26.286 32 18.857 65.143 36.571 97.714 54.857 11.429 5.714 39.429 18.286 43.429 30.286 1.714 4 1.714 8 1.714 12z"
-                    ></path>
-                  </svg>
-                  <span class="home-text7 Section-Text">Phone Number</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="home-section-separator"></div>
-        <div class="home-footer-container">
-          <div class="home-footer">
-            <div class="home-social-links"></div>
-            <div class="home-copyright-container">
-              <svg viewBox="0 0 1024 1024" class="home-icon10">
+        <div class="games-footer-container">
+          <div class="games-footer">
+            <div class="games-copyright-container">
+              <svg viewBox="0 0 1024 1024" class="games-icon10">
                 <path
                   d="M512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM506 390q-80 0-80 116v12q0 116 80 116 30 0 50-17t20-43h76q0 50-44 88-42 36-102 36-80 0-122-48t-42-132v-12q0-82 40-128 48-54 124-54 66 0 104 38 42 42 42 98h-76q0-14-6-26-10-20-14-24-20-20-50-20z"
                 ></path>
               </svg>
-              <span class="Anchor">Copyright H8ful 8, 2023</span>
+              <span class="Anchor">Copyright H8ful8, 2023</span>
             </div>
           </div>
         </div>
