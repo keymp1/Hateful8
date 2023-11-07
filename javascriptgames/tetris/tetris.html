@@ -58,6 +58,7 @@
   <button id="left-button">Left</button>
   <button id="rotate-button">Rotate</button>
   <button id="right-button">Right</button>
+  <button id="down-button">Down</button>
 </div>
 <script src="script.js"></script>
 <script>
@@ -360,11 +361,12 @@ document.addEventListener('keydown', function(e) {
 const leftButton = document.getElementById('left-button');
 const rightButton = document.getElementById('right-button');
 const rotateButton = document.getElementById('rotate-button');
-
+const downButton = document.getElementById('down-button');
 // Add event listeners for left and right button clicks
 leftButton.addEventListener('click', moveTetrominoLeft);
 rightButton.addEventListener('click', moveTetrominoRight);
 rotateButton.addEventListener('click', rotateTetromino);
+downButton.addEventListener('click', downTetromino);
 
 function moveTetrominoLeft() {
   if (!gameOver) {
@@ -392,6 +394,25 @@ function rotateTetromino() {
     }
   }
 }
+
+
+function downTetromino() {
+
+  if (!gameOver) {
+    const row = tetromino.row + 1;
+
+    if (!isValidMove(tetromino.matrix, row, tetromino.col)) {
+      tetromino.row = row - 1;
+
+      placeTetromino();
+      return;
+    }
+
+    tetromino.row = row;
+    
+    
+  }
+};
 
 // ...
 
