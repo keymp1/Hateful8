@@ -4,6 +4,7 @@
 var Game      = Game      || {};
 var Keyboard  = Keyboard  || {}; 
 var Component = Component || {};
+var direction = 'right';
 
 /**
  * Keyboard Map
@@ -19,7 +20,6 @@ Keyboard.Keymap = {
  * Keyboard Events
  */
 Keyboard.ControllerEvents = function() {
-  
   // Setts
   var self      = this;
   this.pressKey = null;
@@ -35,6 +35,42 @@ Keyboard.ControllerEvents = function() {
     return this.keymap[this.pressKey];
   };
 };
+
+/**
+ * Mobile Mapping 
+ *  
+ */
+var upButton= document.getElementById("upButton");
+var downButton= document.getElementById("downButton");
+var leftButton= document.getElementById("leftButton");
+var rightButton= document.getElementById("rightButton");
+
+/**
+ * Mobile Events 
+*/
+upButton.addEventListener("click", function (){
+  direction = 'up';
+
+  console.log("Up button was pressed.");
+});
+
+downButton.addEventListener("click", function (){
+  direction = 'down';
+  console.log("Down button was pressed. ");
+});
+
+leftButton.addEventListener("click", function (){
+  direction = 'left';
+
+  console.log("Left button was pressed. ");
+});
+
+rightButton.addEventListener("click", function (){
+  direction = 'right';
+
+  console.log("Right button was pressed. ");
+});
+
 
 /**
  * Game Component Stage
@@ -106,7 +142,7 @@ Component.Snake = function(canvas, conf) {
     this.stage.length            = [];
     this.stage.food              = {};
     this.stage.score             = 0;
-    this.stage.direction         = 'right';
+    direction         = 'right';
     this.stage.keyEvent.pressKey = null;
     this.initSnake();
     this.initFood();
@@ -124,7 +160,7 @@ Game.Draw = function(context, snake) {
     // Check Keypress And Set Stage direction
     var keyPress = snake.stage.keyEvent.getKey(); 
     if (typeof(keyPress) != 'undefined') {
-      snake.stage.direction = keyPress;
+      direction = keyPress;
     }
     
     // Draw White Stage
@@ -135,8 +171,9 @@ Game.Draw = function(context, snake) {
     var nx = snake.stage.length[0].x;
     var ny = snake.stage.length[0].y;
     
+
     // Add position by stage direction
-    switch (snake.stage.direction) {
+    switch (direction) {
       case 'right':
         nx++;
         break;
