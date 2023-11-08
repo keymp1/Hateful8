@@ -61,55 +61,60 @@
   </head>
   <body>
     <link rel="stylesheet" href="./style.css" />
+    
     <div>
       <link href="./community.css" rel="stylesheet" />
+      <link href="./about.css" rel="stylesheet" />
 
       <div class="community-container">
-        <div data-role="Header" class="community-navbar-container">
-          <div class="community-navbar">
-            <div class="community-left-side">
-              <div data-role="BurgerMenu" class="community-burger-menu">
-                <svg viewBox="0 0 1024 1024" class="community-icon">
-                  <path
-                    d="M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z"
-                  ></path>
+        <div data-role="Header" class="about-navbar-container">
+          <div class="about-navbar">
+            <div class="about-left-side">
+              <div data-role="BurgerMenu" class="about-burger-menu">
+                <svg viewBox="0 0 1024 1024" class="about-icon">
+                  <path d="M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z"></path>
                 </svg>
               </div>
-              <a href="index.html" class="community-navlink">
-                <img
-                  alt="image"
-                  src="public/logotransparent-400w.png"
-                  loading="eager"
-                  class="community-image"
-                />
+              <a href="index.html" class="about-navlink">
+                <img alt="image" src="public/logotransparent-500h.png" loading="eager" class="about-image" />
               </a>
-              <div class="community-links-container">
-                <a href="index.html" class="community-link">Home</a>
-                <span class="community-link2">Community</span>
-                <a href="about.html" class="community-link3">About</a>
+              <div class="about-links-container">
+                <a href="index.html" class="about-link">
+                  <span>Home</span>
+                  <br />
+                </a>
+                <a href="community.html" class="about-link3"> <!-- Updated link to point to community.html -->
+                  <span>Community</span>
+                  <br />
+                </a>
+                <a href="about.html" class="about-link"> 
+                  <span>About</span>
+                  <br />
+                </a>
               </div>
             </div>
-            <div class="community-right-side"></div>
-            <div data-role="MobileMenu" class="community-mobile-menu">
-              <div class="community-container1">
-                <img
-                  alt="image"
-                  src="https://play.teleporthq.io/static/svg/default-img.svg"
-                  class="community-image1"
-                />
-                <div data-role="CloseMobileMenu" class="community-close-menu">
-                  <svg viewBox="0 0 1024 1024" class="community-icon02">
+            <div class="about-right-side"></div>
+            <div data-role="MobileMenu" class="about-mobile-menu">
+              <div class="about-container1">
+                <img alt="image" src="https://play.teleporthq.io/static/svg/default-img.svg" class="about-image1" />
+                <div data-role="CloseMobileMenu" class="about-close-menu">
+                  <svg viewBox="0 0 1024 1024" class="about-icon2">
                     <path
-                      d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
-                    ></path>
+                      d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z">
+                    </path>
                   </svg>
                 </div>
               </div>
-              <div class="community-links-container1">
-                <span class="community-link4 Anchor">Resources</span>
-                <span class="community-link5 Anchor">Inspiration</span>
-                <span class="community-link6 Anchor">Process</span>
-                <span class="community-link7 Anchor">Our story</span>
+              <div class="about-links-container1">
+                <a href="index.html">
+                <span class="about-link4 Anchor">Home</span>
+                </a>
+                <a href="community.html">
+                <span class="about-link4 Anchor">Community</span>
+                </a>
+                <a href="about.html">
+                <span class="about-link4 Anchor">About</span>
+                </a>
               </div>
             </div>
           </div>

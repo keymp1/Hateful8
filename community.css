@@ -239,12 +239,15 @@
   display: contents;
 }
 .community-image {
-  width: 324px;
-  height: 100px;
-  align-self: center;
+  width: 433px;
+  position: relative;
+  height: 100%;
+  align-self: flex-start;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
   object-fit: cover;
-  margin-right: var(--dl-space-space-doubleunit);
-  text-decoration: none;
 }
 .community-links-container {
   width: 100%;

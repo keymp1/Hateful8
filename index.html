@@ -80,32 +80,64 @@
   </head>
   <body>
     <link rel="stylesheet" href="./style.css" />
+
     <div>
       <link href="./index.css" rel="stylesheet" />
+      <link href="./about.css" rel="stylesheet" />
 
       <div class="games-container">
-        <div data-role="Header" class="games-navbar-container">
-          <div class="games-navbar">
-            <div class="games-buttons">
-              <button class="games-login button">Login</button>
-              <button class="button">Register</button>
+              <div data-role="Header" class="about-navbar-container">
+        <div class="about-navbar">
+          <div class="about-left-side">
+            <div data-role="BurgerMenu" class="about-burger-menu">
+              <svg viewBox="0 0 1024 1024" class="about-icon">
+                <path d="M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z"></path>
+              </svg>
             </div>
-            <a href="index.html" class="games-navlink">
-              <img
-                alt="image"
-                src="public/logotransparent-600w2.png"
-                loading="eager"
-                class="games-image button img"
-              />
+            <a href="index.html" class="about-navlink">
+              <img alt="image" src="public/logotransparent-500h.png" loading="eager" class="about-image" />
             </a>
-            <!-- This div contains links to the other pages.  -->
-            <div class="games-links-container">
-              <a href="about.html" class="games-link">About</a>
-              <a href="index.html" class="games-link2">Games</a>
-              <a href="community.html" class="games-link3">Community</a>
+            <div class="about-links-container">
+              <a href="index.html" class="about-link3">
+                <span>Home</span>
+                <br />
+              </a>
+              <a href="community.html" class="about-link"> <!-- Updated link to point to community.html -->
+                <span>Community</span>
+                <br />
+              </a>
+              <a href="about.html" class="about-link"> 
+                <span>About</span>
+                <br />
+              </a>
+            </div>
+          </div>
+          <div class="about-right-side"></div>
+          <div data-role="MobileMenu" class="about-mobile-menu">
+            <div class="about-container1">
+              <img alt="image" src="https://play.teleporthq.io/static/svg/default-img.svg" class="about-image1" />
+              <div data-role="CloseMobileMenu" class="about-close-menu">
+                <svg viewBox="0 0 1024 1024" class="about-icon2">
+                  <path
+                    d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <div class="about-links-container1">
+              <a href="index.html">
+              <span class="about-link4 Anchor">Home</span>
+              </a>
+              <a href="community.html">
+              <span class="about-link4 Anchor">Community</span>
+              </a>
+              <a href="about.html">
+              <span class="about-link4 Anchor">About</span>
+              </a>
             </div>
           </div>
         </div>
+      </div>
         <div class="games-container1">
           <div class="games-container2">
             <style>
