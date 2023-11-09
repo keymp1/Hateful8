@@ -34,11 +34,36 @@
   canvas {
     border: 1px solid white;
   }
+
+  #button-container {
+
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      
+    }
+
+    #left-button, #right-button, #rotate-button {
+      font-size: 16px;
+      padding: 20px 30px;
+      margin: 10px;
+      /*background-color: yellow; */
+    }
+
   </style>
 </head>
 <body>
 <canvas width="320" height="640" id="game"></canvas>
+<div id="button-container">
+  <button id="left-button">Left</button>
+  <button id="rotate-button">Rotate</button>
+  <button id="right-button">Right</button>
+  <button id="down-button">Down</button>
+</div>
+<script src="script.js"></script>
 <script>
+
+  
 // https://tetris.fandom.com/wiki/Tetris_Guideline
 
 // get a random integer between the range of [min,max]
@@ -61,6 +86,8 @@ function generateSequence() {
     tetrominoSequence.push(name);
   }
 }
+
+
 
 // get the next tetromino in the sequence
 function getNextTetromino() {
@@ -150,6 +177,8 @@ function placeTetromino() {
 
   tetromino = getNextTetromino();
 }
+
+
 
 // show the game over screen
 function showGameOver() {
@@ -326,6 +355,67 @@ document.addEventListener('keydown', function(e) {
     tetromino.row = row;
   }
 });
+
+// ...
+
+const leftButton = document.getElementById('left-button');
+const rightButton = document.getElementById('right-button');
+const rotateButton = document.getElementById('rotate-button');
+const downButton = document.getElementById('down-button');
+// Add event listeners for left and right button clicks
+leftButton.addEventListener('click', moveTetrominoLeft);
+rightButton.addEventListener('click', moveTetrominoRight);
+rotateButton.addEventListener('click', rotateTetromino);
+downButton.addEventListener('click', downTetromino);
+
+function moveTetrominoLeft() {
+  if (!gameOver) {
+    const col = tetromino.col - 1;
+    if (isValidMove(tetromino.matrix, tetromino.row, col)) {
+      tetromino.col = col;
+    }
+  }
+}
+
+function moveTetrominoRight() {
+  if (!gameOver) {
+    const col = tetromino.col + 1;
+    if (isValidMove(tetromino.matrix, tetromino.row, col)) {
+      tetromino.col = col;
+    }
+  }
+}
+
+function rotateTetromino() {
+  if (!gameOver) {
+    const matrix = rotate(tetromino.matrix);
+    if (isValidMove(matrix, tetromino.row, tetromino.col)) {
+      tetromino.matrix = matrix;
+    }
+  }
+}
+
+
+function downTetromino() {
+
+  if (!gameOver) {
+    const row = tetromino.row + 1;
+
+    if (!isValidMove(tetromino.matrix, row, tetromino.col)) {
+      tetromino.row = row - 1;
+
+      placeTetromino();
+      return;
+    }
+
+    tetromino.row = row;
+    
+    
+  }
+};
+
+// ...
+
 
 // start the game
 rAF = requestAnimationFrame(loop);
