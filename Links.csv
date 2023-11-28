@@ -1,0 +1,11 @@
+CurrentPage,XPATH,TargetLink
+Home,/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/a[2]/span[1],Community
+Community,/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/a[1]/span[1],Home
+Home,0,About
+About,0,Home
+Home,0,Community
+Community,0,About
+About,0,Community
+Community,0,Logo Link
+Home ,0,About
+About ,0,Logo Link
