@@ -1,0 +1,3 @@
+The content of these folders was used to test automated deployment to server once commits to the main branch were made. 
+
+It worked on the first commit but later commits caused errors
