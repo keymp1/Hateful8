@@ -703,6 +703,55 @@
   color: #e2e2e2;
 }
 
+.Game-Submission-link {
+
+  font-size: 50px;
+  color: #ffffff;
+
+  padding-top: 100px;
+  padding-bottom: 80px;
+  
+}
+
+
+
+.Game-Submission {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.Game-Submission-Link {
+  margin-bottom: 10px; /* Adjust the spacing between image and link */
+  font-size: 50px;
+}
+
+.Game-Submission-Link img {
+  display: block; /* Ensure the image takes the full width */
+  max-width: 100%; /* Make sure the image doesn't exceed its container */
+}
+
+.hover-effect {
+  display: block;
+  margin-top: 5px; /* Adjust vertical space between image and link */
+  color: yellow;
+}
+
+
+.Game-Submission-Description p,
+.Game-Submission-Link a {
+  color: white; /* Sets the text color to white */
+  transition: color 0.3s ease;
+}
+
+
+.Game-Submission-Link a:hover,
+.Game-Submission-Link a:hover img {
+  color: yellow; /* Sets the text color to yellow on hover */
+  transition: color 0.3s ease; /* Adds a smooth color transition effect */
+}
 
 
 
