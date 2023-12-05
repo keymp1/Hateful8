@@ -16,3 +16,5 @@ Everything needed is directly on the website
 _____________________________________________________________________
 Credit to Ben Smith, Matthew Lockard, Michael Ng, Kincaid Young, Caleb Hammmound,
 Maxwell Key, and Elainna Peay
+
+https://docs.google.com/document/d/1E2-d21BHSOo0dogn0MqICzva3WHNPdAAljqy-GQMyfU/edit
